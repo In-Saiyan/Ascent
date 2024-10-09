@@ -1,0 +1,30 @@
+.mmt1{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mmt2{
+    display : flex;
+    flex-direction : column;
+    width : 220px;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.MMT3{
+    text-align: center;
+}
+
+.img_at_mmt2{
+    height: 150px;
+    width: 150px;
+    border-radius:500px;
+    margin-bottom: 25px;
+    
+}
+
+
