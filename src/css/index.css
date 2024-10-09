@@ -27,4 +27,14 @@
     
 }
 
+.font_center{
+    text-align: center;
+}
+
+.text_deco{
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size: 20px;
+
+}
 
