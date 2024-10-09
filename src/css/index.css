@@ -1,0 +1,16 @@
+.projects-card{
+    display:inline-block;
+    height: 550px;
+    width:320px;
+    background-color:aqua;
+
+
+    }
+.projects-section{
+    display:flex;
+    display:row;
+    justify-content: space-evenly;
+}
+.upper{
+    display:inline block;
+}
