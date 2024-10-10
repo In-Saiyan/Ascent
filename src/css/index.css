@@ -1,20 +1,23 @@
 .projects-card{
     display:inline-block;
-    height: 550px;
-    width:320px;
+    height: 60vh;
+    width:calc(100% / 4 - 80px);
     background-color:WHITE;
     border-radius:20px;
-    border:2px dashed black;
+    border:2px solid black;
     font-size:80px;
     align-content: center;
     justify-content: center;
     text-align:center;
+    min-width: 250px;
+    gap: 20px;
 }
 .projects-section{
     display:flex;
-    display:row;
+    flex-direction: row;
     justify-content: space-evenly;
     font-size:80px;
+    flex-wrap: wrap;
 }
 .projects-card div{
     transition-duration: 0.5s;
@@ -32,6 +35,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .mtt2{
@@ -52,6 +56,7 @@
     width: 150px;
     border-radius:500px;
     margin-bottom: 25px;
+    transition-duration: 0.3s;
     
 }
 
@@ -66,38 +71,41 @@
 }
 
 .img_at_mtt2:hover{
-    animation: rotation 5s linear 0s infinite;
-}
-
-@keyframes rotation {
-    from{
-
-    }
-
-    to{
-        transform: rotate(360deg);
-    }
+    transform: scale(1.1);
 }
 
 
-
-.text_deco_mtt{
-    font-weight: bolder;
-    text-decoration: underline;
-    font-size: 15px;
+.about-section-main{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.about-section-lower{
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.about-section-image{
+    min-width: 300px;
+    width: 40%;
+    height: 50vh;
+    background-image: url(../assets/about.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-.img_at_mtt2:hover{
-    animation: rotation 5s linear 0s infinite;
+.about-section-main{
+    text-align: center;
 }
-
-@keyframes rotation {
-    from{
-
-    }
-
-    to{
-        transform: rotate(360deg);
-    }
+.about-section-description{
+    width: 60%;
+    height: 50vh;
 }
 
