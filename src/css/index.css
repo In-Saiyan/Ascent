@@ -108,4 +108,6 @@
     width: 60%;
     height: 50vh;
 }
-
+.about-section-description p{
+    font-size: 22px;
+}
