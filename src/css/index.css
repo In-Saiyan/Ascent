@@ -1,4 +1,4 @@
-.mmt1{
+.mtt1{
     width:100%;
     display: flex;
     flex-direction: row;
@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-.mmt2{
+.mtt2{
     display : flex;
     flex-direction : column;
     width : 220px;
@@ -15,11 +15,11 @@
     justify-content: center;
 }
 
-.MMT3{
+.mtt3{
     text-align: center;
 }
 
-.img_at_mmt2{
+.img_at_mtt2{
     height: 150px;
     width: 150px;
     border-radius:500px;
@@ -31,10 +31,23 @@
     text-align: center;
 }
 
-.text_deco{
+.text_deco_mtt{
     font-weight: bolder;
     text-decoration: underline;
-    font-size: 20px;
+    font-size: 15px;
+}
 
+.img_at_mtt2:hover{
+    animation: rotation 5s linear 0s infinite;
+}
+
+@keyframes rotation {
+    from{
+
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
 }
 
