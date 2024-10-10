@@ -1,3 +1,31 @@
+.projects-card{
+    display:inline-block;
+    height: 550px;
+    width:320px;
+    background-color:WHITE;
+    border-radius:20px;
+    border:2px dashed black;
+    font-size:80px;
+    align-content: center;
+    justify-content: center;
+    text-align:center;
+}
+.projects-section{
+    display:flex;
+    display:row;
+    justify-content: space-evenly;
+    font-size:80px;
+}
+.projects-card div{
+    transition-duration: 0.5s;
+    display: none;
+}
+.projects-card:hover div{
+    display: block;
+}
+.upper{
+    display:inline block;
+}
 .mtt1{
     width:100%;
     display: flex;
@@ -30,6 +58,28 @@
 .font_center{
     text-align: center;
 }
+
+.text_deco_mtt{
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.img_at_mtt2:hover{
+    animation: rotation 5s linear 0s infinite;
+}
+
+@keyframes rotation {
+    from{
+
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
 
 .text_deco_mtt{
     font-weight: bolder;
