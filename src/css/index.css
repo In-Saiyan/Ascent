@@ -2,15 +2,28 @@
     display:inline-block;
     height: 550px;
     width:320px;
-    background-color:aqua;
-
-
+    background-color:WHITE;
+    border-radius:20px;
+    border:2px dashed black;
+    font-size:80px;
+    align-content: center;
+    justify-content: center;
+    text-align:center;
     }
 .projects-section{
     display:flex;
     display:row;
     justify-content: space-evenly;
+    font-size:80px;
+}
+.projects-card div{
+    transition-duration: 0.5s;
+    display: none;
+}
+.projects-card:hover div{
+    display: block;
 }
 .upper{
     display:inline block;
 }
+
