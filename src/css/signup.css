@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
 body{
     height: 100vh;
     width: 100%;
     margin: 0;
     display:  inline-flex;
     overflow: hidden;
-    font-family: sans-serif;
+    font-family: jost,sans-serif;
 }
 .a{
     display: flex;
@@ -120,10 +122,11 @@ p{
     }
     .a {
         width: 100%;
+        align-items: center;
     }
     .left {
         margin: 10%;
-        height: auto;
+        height: fit-content;
         border-radius: 15px;
         border-right: 10px solid black;
         min-height: 480px;
