@@ -144,8 +144,8 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
 .projects-card {
     display: inline-block;
     height: 60vh;
-    width: calc(100% / 4 - 80px);
-    background-color: WHITE;
+    width: calc(100% / 4 - 5%);
+    /* background-color: WHITE; */
     border-radius: 20px;
     border: 2px solid black;
     font-size: 40px;
