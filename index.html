@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ascent</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascent</title>
     <link rel="stylesheet" href="./src/css/form.css">
-	<link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="./src/css/index.css">
 </head>
+
 <body>
-    <header class="header" id="header"></header>
-	<main class="main-content">
-		<section class="hero-section">
-			<img class="hero-logo" src="./src/assets/AscentLogo.webp"></img>
-			<div class="hero-content">
-				<div class="heros Intro">
-					<div class="hero-background"></div>
-					<h1>Intro</h1>
-				</div>
-				<div class="heros Projects">
-					<div class="hero-background"></div>
-					<h1>Projects</h1>
-				</div>
-				<div class="heros About">
-					<div class="hero-background"></div>
-					<h1>About</h1>
-				</div>
-				<div class="heros Contact">
-					<div class="hero-background"></div>
-					<h1>Contact</h1>
-				</div>
-			</div>
-		</section>
+    <header class="header" id="header">
+        <div id="topbar"> <!-- TODO Topbar -->
+            <div class="topbar-login-button"><button>Login</button></div>
+        </div>
+    </header>
+    <main class="main-content">
+        <section class="hero-section">
+            <img class="hero-logo" src="./src/assets/AscentLogo.webp"></img>
+            <div class="hero-content">
+                <div class="heros Intro">
+                    <div class="hero-background"></div>
+                    <h1>Intro</h1>
+                </div>
+                <div class="heros Projects">
+                    <div class="hero-background"></div>
+                    <h1>Projects</h1>
+                </div>
+                <div class="heros About">
+                    <div class="hero-background"></div>
+                    <h1>About</h1>
+                </div>
+                <div class="heros Contact">
+                    <div class="hero-background"></div>
+                    <h1>Contact</h1>
+                </div>
+            </div>
+        </section>
         <section class="project-section">
             <div class="project-title">
                 <div id="project-background">
                     <div class="project-container"></div>
-                    <h2 style="font-size:50px;">Best Projects</h2>
+                    <h2 style="font-size:50px; color: white;">Best Projects</h2>
                 </div>
             </div>
             <div class="projects-section">
@@ -59,8 +65,8 @@
         </section>
         <br><br>
         <section class="mtt-section">
-            <h1 class="mtt3" style="font-size: 40px;"> Meet the <span style="font-size: 48px; background-color:#c0774d; padding:7px"> Team</span></h1>
-            <br>
+            <h1 class="mtt3" style="font-size: 40px;"> Meet the <span
+                    style="font-size: 48px; color:#f8b29b; padding:3px"> Team</span></h1>
             <div class="mtt1">
                 <div class="mtt2">
                     <img src="https://avatars.githubusercontent.com/u/91674437?v=4" target="_blank" class="img_at_mtt2">
@@ -151,15 +157,26 @@
                 </h1>
             </div>
             <div class="about-section-lower">
-                <div class="about-section-image">
+                <!-- <div class="about-section-image">
 
-                </div>
+                </div> -->
                 <div class="about-section-description">
                     <h1>
                         Join us in our "Ascent"
                     </h1>
                     <p>
-                        Ascent is a dynamic platform designed for freelancers and businesses alike. Whether you're a professional looking to showcase your expertise, a company seeking specialized talent, or a freelancer eager to collaborate and learn, Ascent provides the tools to take your career or project to new heights.
+                        Ascent is a dynamic platform designed for freelancers and businesses alike. Whether you're a
+                        professional looking to showcase your expertise, a company seeking specialized talent, or a
+                        freelancer eager to collaborate and learn, Ascent provides the tools to take your career or
+                        project to new heights.
+                    </p>
+                    <br>
+                    <h1>
+                        Ready to Start Your Ascent?
+                    </h1>
+                    <p>
+                        Join us today! Whether you’re a freelancer looking to grow or a business in need of top-tier
+                        talent, Ascent has the tools, community, and resources to help you succeed.
                     </p>
                 </div>
             </div>
@@ -171,13 +188,14 @@
                     <h1>TOUCH</h1>
                     <p><a href="https://github.com/In-Saiyan/Ascent/graphs/contributors">Team Mavenix</a></p>
                     <p>Indian Institute of Information Technology, Lucknow</p><br><br><br>
-                    <p style="font-size: 0.8em;"> Customer Support Team </p>   
+                    <p style="font-size: 0.8em;"> Customer Support Team </p>
                 </div>
             </div>
             <div class="b">
                 <form class="form">
                     First Name<br>
-                    <input type="text" placeholder="Type your First Name" class="text1" spellcheck="false" required><br><br>
+                    <input type="text" placeholder="Type your First Name" class="text1" spellcheck="false"
+                        required><br><br>
                     Last Name<br>
                     <input type="text" placeholder="Type your Last Name" class="text1" spellcheck="false"><br><br>
                     Contact No<br>
@@ -185,14 +203,16 @@
                     Email<br>
                     <input type="email" placeholder="Type your Email" class="text1" required><br><br>
                     Feedback<br>
-                    <input type="text" placeholder="Give your valuable Feedback or write a Message..... " class="text2"><br><br><br>
+                    <input type="text" placeholder="Give your valuable Feedback or write a Message..... "
+                        class="text2"><br><br><br>
                     <input type="submit" value="Submit" class="submit">
                 </form>
             </div>
         </section>
         <br>
-	</main>
-    
+    </main>
     <footer class="footer" id="footer"></footer>
+    <script src="src/js/index.js"></script>
 </body>
+
 </html>

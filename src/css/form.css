@@ -1,98 +1,176 @@
-/* body{
-    background-color: #4B1F0E;
-    height: 100vh;
-    width: 100%;
+.contact-form-master {
     display: flex;
-    padding: 100px;
-} */
-.a{
-    width: 30vw;
-    background-position: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 100vw;
+    width: 90%;
+    gap: 0;
+    margin: 5%;
+    border: white solid;
+    border-radius: 22px;
+}
+
+.a {
+    max-width: 30vw;
     background-color: #BE7656;
+    text-align: center;
+    flex: 1;
+    padding: 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    padding: 40px;
     display: flex;
-    justify-content: flex-end; 
-    position: relative;
-    /* margin-left: 200px;
-    margin-top: 100px; */
+    flex-direction: column;
+    justify-content: center;
 }
-.callme{
-    color: white;
-    text-align: left;
-    line-height: 2;
-}
-.callme h1{
-    margin: 0;
-    font-size: 3em; 
-    font-weight: bold;
-}
-.callme{
-    font-size: 1.2em;
-}
-.b{
-    width: 40vw;
-    background-position: center;
+
+.b {
     background-color: #EFC3A4;
-    /* margin-right: 100px;
-    margin-top: 100px; */
+    flex: 1;
     padding: 20px;
     font-size: 22px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-}
-.text1{
-    background-color: #EFC3A4;
-    border: solid white 2px;
-    border-radius: 8px;
-    padding: 10px;
-    width: 400px;
-    /* color: ; */
-}
-.text2{
-    background-color: #EFC3A4;
-    border: solid white 2px;
-    border-radius: 8px;
-    padding: 10px;
-    width: 400px;
-    height: 100px;    
-    text-align:left;
-}
-.form{
-    color: #4B1F0E;
-}
-
-.contact-form-master{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.submit{
+.text1, .text2 {
+    background-color: #EFC3A4;
+    border: solid #794028 2px;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.text2 {
+    height: 100px;
+}
+
+.form {
+    gap: 9px;
+    color: #4B1F0E;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.submit {
     background-color: #BE7656;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    float: right;
     color: white;
-    margin-right: 75px;
     width: 100px;
-    
+    align-self: flex-end;
+    margin-top: 10px;
 }
-.submit:hover{
-    background-color: #794028;
 
+.submit:hover {
+    background-color: #794028;
 }
-.text1:hover{
-    border: solid #794028 2px;;
+
+.text1:hover, .text2:hover {
+    border: solid #472012 2px;
 }
-.text1:hover::placeholder{
+
+text2{
+    text-align: left;
+}
+
+.text1:hover::placeholder, .text2:hover::placeholder {
     color: transparent;
 }
-.text2:hover{
-    border: solid #794028 2px;;
+.submit:focus {
+    background-color: #794028;
 }
-.text2:hover::placeholder{
-    color: transparent
+
+.text1:focus, .text2:focus {
+    border: solid #472012 2px;
+    outline-style: none;
+}
+
+.text1:focus::placeholder, .text2:focus::placeholder {
+    color: transparent;
+}
+
+@media (max-width: 1024px) {
+    .contact-form-master {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .a, .b {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .a {
+        max-width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .b {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .callme h1 {
+        font-size: 2em;
+    }
+
+    .b {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .a{
+        max-width: 100vw;
+    }
+    .callme h1 {
+        font-size: 1.8em;
+    }
+
+    .b {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form-master {
+        padding: 10px;
+    }
+
+    .a, .b {
+        width: 100%;
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    .a {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .b {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .callme h1 {
+        font-size: 1.5em;
+    }
+
+    .b {
+        font-size: 14px;
+    }
+
+    .submit {
+        width: 100%;
+    }
 }
