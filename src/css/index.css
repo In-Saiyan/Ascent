@@ -9,6 +9,11 @@ body {
 	width: 100%;
 	height: 100vh;
 	font-family: "Jost", sans-serif;
+	transition: background-color 0.5s ease;
+	margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease;
+    background-color: #fdaf8d;
 }
 
 body .main-content .hero-section {
@@ -18,6 +23,8 @@ body .main-content .hero-section {
 	position: relative;
 	top: 0;
 	left: 0;
+	background-color: #1b1b1b; /* Dark background */
+    transition: background-color 0.5s ease;
 }
 
 body .main-content .hero-section .hero-content {
@@ -80,18 +87,22 @@ body .main-content .hero-section .hero-content .heros:hover .hero-background {
 
 body .main-content .hero-section .hero-content .heros.Intro .hero-background {
 	background-image: linear-gradient(#0004, #0004), url("https://images.unsplash.com/photo-1664575262619-b28fef7a40a4?q=80&w=1432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    border: 2px solid transparent
 }
 
 body .main-content .hero-section .hero-content .heros.Projects .hero-background {
 	background-image: linear-gradient(#0004, #0004), url("https://images.unsplash.com/photo-1664575197229-3bbebc281874?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    border: 2px solid transparent
 }
 
 body .main-content .hero-section .hero-content .heros.About .hero-background {
 	background-image: linear-gradient(#0004, #0004), url("https://images.unsplash.com/photo-1551275073-f8adef647c1d?q=80&w=1467&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    border: 2px solid transparent
 }
 
 body .main-content .hero-section .hero-content .heros.Contact .hero-background {
 	background-image: linear-gradient(#0004, #0004), url("https://images.unsplash.com/photo-1583508915901-b5f84c1dcde1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    border: 2px solid transparent
 }
 
 body .main-content .hero-section .hero-content .heros.Intro{
@@ -237,40 +248,112 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
     transform: scale(1.1);
 }
 
-
-.about-section-main{
-    width: 100%;
+.about-section-main {
+    width: 90%; 
     padding: 30px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-}
-.about-section-lower{
-    width: 100%;
-    gap: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.about-section-image{
-    min-width: 300px;
-    width: 40%;
-    height: 50vh;
-    background-image: url(../assets/about.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    text-align: left;
+    margin: 0 auto; 
+    flex-wrap: nowrap; 
+    border: #4B1F0E solid;
+    border-radius: 22px;
 }
 
-.about-section-main{
+.about-section-upper {
+    width: 40%;
+    text-align: left;
+}
+
+.about-section-upper h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.about-section-lower {
+    width: 60vw; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.about-section-description {
+    width: 100%;
+}
+
+.about-section-description h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-section-description p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .about-section-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-section-upper,
+    .about-section-lower {
+        width: 90%;
+    }
+
+    .about-section-upper h1 {
+        text-align: center; 
+    }
+
+    .about-section-description {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section-upper h1 {
+        font-size: 2.5em;
+    }
+
+    .about-section-description h1 {
+        font-size: 2em;
+    }
+
+    .about-section-description p {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section-upper h1 {
+        font-size: 2em;
+    }
+
+    .about-section-description h1 {
+        font-size: 1.8em;
+    }
+
+    .about-section-description p {
+        font-size: 0.9em;
+    }
+}
+
+
+/* scrolling with topbar */
+#topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #6A2826;
+    color: white;
+    z-index: 3;
     text-align: center;
-}
-.about-section-description{
-    width: 60%;
-    height: 50vh;
-}
-.about-section-description p{
-    font-size: 22px;
+    padding: 10px;
+    display: none; /* Hidden initially */
 }
