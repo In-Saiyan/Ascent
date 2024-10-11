@@ -186,6 +186,7 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
     display:inline block;
 }
 .mtt1{
+	max-width: 1200px;
     width:100%;
     display: flex;
     flex-direction: row;
