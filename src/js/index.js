@@ -25,6 +25,9 @@ window.onscroll = function () {
     const halfway = document.documentElement.scrollHeight / 5;
 
     if (scrollPosition > halfway) {
+        setTimeout(function () {
+            topbar.style.opacity = '1';
+        }, 200);
         topbar.style.display = "flex";  
         document.body.style.color = "white"; 
     } else {
@@ -38,9 +41,6 @@ window.onload = function () {
     const topbar = document.getElementById("topbar");
     const scrollPosition = window.scrollY;
     const halfway = document.documentElement.scrollHeight / 5;
-    setTimeout(function () {
-        topbar.style.opacity = '1';
-    }, 200);
     if (scrollPosition > halfway) {
         topbar.style.display = "flex";  
     }
