@@ -141,3 +141,129 @@ body .main-content .hero-section .hero-content .heros h1 {
 body .main-content .hero-section .hero-content .heros:hover h1 {
 	opacity: 1;
 }
+.projects-card {
+    display: inline-block;
+    height: 60vh;
+    width: calc(100% / 4 - 80px);
+    background-color: WHITE;
+    border-radius: 20px;
+    border: 2px solid black;
+    font-size: 40px;
+    /* align-content: center;
+    justify-content: center; */
+    text-align: center;
+    min-width: 250px;
+    transition-duration: 0.5s;
+    gap: 20px;
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 80px;
+    flex-wrap: wrap;
+}
+
+.projects-card div {
+    font-size: 22px;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.5s ease;  
+}
+
+.projects-card:hover div {
+    visibility: visible;  /* Make it visible */
+    opacity: 1;  /* Smoothly fade in the text */
+}
+
+.project-title{
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.upper{
+    display:inline block;
+}
+.mtt1{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.mtt2{
+    display : flex;
+    flex-direction : column;
+    width : 220px;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.mtt3{
+    text-align: center;
+}
+
+.img_at_mtt2{
+    height: 150px;
+    width: 150px;
+    border-radius:500px;
+    margin-bottom: 25px;
+    transition-duration: 0.3s;
+    
+}
+
+.font_center{
+    text-align: center;
+}
+
+.text_deco_mtt{
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.img_at_mtt2:hover{
+    transform: scale(1.1);
+}
+
+
+.about-section-main{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.about-section-lower{
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.about-section-image{
+    min-width: 300px;
+    width: 40%;
+    height: 50vh;
+    background-image: url(../assets/about.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.about-section-main{
+    text-align: center;
+}
+.about-section-description{
+    width: 60%;
+    height: 50vh;
+}
+.about-section-description p{
+    font-size: 22px;
+}
