@@ -1,3 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	font-family: "Jost", sans-serif;
+}
+
+body .main-content .hero-section {
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+body .main-content .hero-section .hero-content {
+	height: 100vh;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	position: relative;
+	top: 0;
+	left: 0;
+	transform: rotate(-6deg);
+}
+
+body .main-content .hero-section .hero-logo{
+/*	font-size: 16rem;*/
+	z-index: 3;
+	position: absolute;
+/*	font-weight: 600;*/
+	top: calc(50% - 1px);
+/*	color: white;*/
+	left: 50%;
+	width: 70%;
+	max-width: 1000px;
+	transform: translate(-50%,-50%) rotate(-0.1deg);
+	pointer-events: none;
+/*	background: url("../assets/AcentLogo.png");*/
+/*	background-repeat: no-repeat;*/
+/*	background-size: center center;*/
+/*	height: 100vh;*/
+/*	width: 100vw;*/
+}
+
+body .main-content .hero-section .hero-content .heros{
+	height: 62.5%;
+	width: 62.5%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+body .main-content .hero-section .hero-content .heros .hero-background {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: all 0.8s ease;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+body .main-content .hero-section .hero-content .heros:hover .hero-background {
+	opacity: 1;
+}
+
+body .main-content .hero-section .hero-content .heros.Intro .hero-background {
+	background-image: linear-gradient(#0004, #0004), url("https://images.unsplash.com/photo-1664575262619-b28fef7a40a4?q=80&w=1432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+body .main-content .hero-section .hero-content .heros.Projects .hero-background {
+	background-image: linear-gradient(#0004, #0004), url("https://images.unsplash.com/photo-1664575197229-3bbebc281874?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+body .main-content .hero-section .hero-content .heros.About .hero-background {
+	background-image: linear-gradient(#0004, #0004), url("https://images.unsplash.com/photo-1551275073-f8adef647c1d?q=80&w=1467&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+body .main-content .hero-section .hero-content .heros.Contact .hero-background {
+	background-image: linear-gradient(#0004, #0004), url("https://images.unsplash.com/photo-1583508915901-b5f84c1dcde1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+body .main-content .hero-section .hero-content .heros.Intro{
+	background: #4B1F0E;
+	right: 50%;
+	position: absolute;
+	bottom: 50%;
+	padding: 0 0 5% 10%;
+}
+
+body .main-content .hero-section .hero-content .heros.Projects{
+	background: #712723;
+	left: 50%;
+	position: absolute;
+	bottom: 50%;
+	padding: 5% 10% 0 0;
+	z-index: 4;
+}
+
+body .main-content .hero-section .hero-content .heros.About{
+	background: #BE7656;
+	right: 50%;
+	position: absolute;
+	top: 50%;
+	padding: 0 0 10% 10%;
+	z-index: 4;
+}
+
+body .main-content .hero-section .hero-content .heros.Contact{
+	background: #794028;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	padding: 0 10% 0 0;
+}
+
+body .main-content .hero-section .hero-content .heros h1 {
+	color: white;
+	font-size: 3rem;
+	transform: rotate(6deg);
+	opacity: 0;
+	transition: all 0.8s ease;
+	z-index: 2;
+	font-weight: 600;
+}
+
+body .main-content .hero-section .hero-content .heros:hover h1 {
+	opacity: 1;
+}
 .projects-card {
     display: inline-block;
     height: 60vh;
