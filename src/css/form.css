@@ -4,11 +4,15 @@
     justify-content: center;
     align-items: stretch;
     max-width: 100vw;
-    width: 100%;
+    width: 90%;
     gap: 0;
+    margin: 5%;
+    border: #472012 solid;
+    border-radius: 22px;
 }
 
 .a {
+    max-width: 30vw;
     background-color: #BE7656;
     text-align: center;
     flex: 1;
@@ -34,7 +38,7 @@
 
 .text1, .text2 {
     background-color: #EFC3A4;
-    border: solid white 2px;
+    border: solid #794028 2px;
     border-radius: 8px;
     padding: 10px;
     width: 100%;
@@ -46,6 +50,7 @@
 }
 
 .form {
+    gap: 9px;
     color: #4B1F0E;
     display: flex;
     flex-direction: column;
@@ -69,10 +74,26 @@
 }
 
 .text1:hover, .text2:hover {
-    border: solid #794028 2px;
+    border: solid #472012 2px;
+}
+
+text2{
+    text-align: left;
 }
 
 .text1:hover::placeholder, .text2:hover::placeholder {
+    color: transparent;
+}
+.submit:focus {
+    background-color: #794028;
+}
+
+.text1:focus, .text2:focus {
+    border: solid #472012 2px;
+    outline-style: none;
+}
+
+.text1:focus::placeholder, .text2:focus::placeholder {
     color: transparent;
 }
 
@@ -88,6 +109,7 @@
     }
 
     .a {
+        max-width: 100%;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
@@ -107,6 +129,9 @@
 }
 
 @media (max-width: 768px) {
+    .a{
+        max-width: 100vw;
+    }
     .callme h1 {
         font-size: 1.8em;
     }
