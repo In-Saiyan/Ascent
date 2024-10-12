@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" type="image/x-icon" href="src/assets/favicon/favicon.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ascent</title>
@@ -12,7 +13,13 @@
 <body>
     <header class="header" id="header">
         <div id="topbar"> <!-- TODO Topbar -->
-            <div class="topbar-login-button"><button>Login</button></div>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-bar">
+            </div>
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
         </div>
     </header>
     <main class="main-content">
@@ -64,9 +71,40 @@
             </div>
         </section>
         <br><br>
+        
+        
+        <section class="contact-form-master">
+            <div class="a">
+                <div class="callme">
+                    <h1>GET IN</h1>
+                    <h1>TOUCH</h1>
+                    <p><a href="https://github.com/In-Saiyan/Ascent/graphs/contributors">Team Mavenix</a></p>
+                    <p>Indian Institute of Information Technology, Lucknow</p><br><br><br>
+                    <p style="font-size: 0.8em;"> Customer Support Team </p>
+                </div>
+            </div>
+            <div class="b">
+                <form class="form">
+                    First Name<br>
+                    <input type="text" placeholder="Type your First Name" class="text1" spellcheck="false"
+                        required><br><br>
+                    Last Name<br>
+                    <input type="text" placeholder="Type your Last Name" class="text1" spellcheck="false"><br><br>
+                    Contact No<br>
+                    <input type="tel" placeholder="Type your Contact No" class="text1"><br><br>
+                    Email<br>
+                    <input type="email" placeholder="Type your Email" class="text1" required><br><br>
+                    Feedback<br>
+                    <input type="text" placeholder="Give your valuable Feedback or write a Message..... "
+                        class="text2"><br><br><br>
+                    <input type="submit" value="Submit" class="submit">
+                </form>
+            </div>
+        </section>
+        
         <section class="mtt-section">
             <h1 class="mtt3" style="font-size: 40px;"> Meet the <span
-                    style="font-size: 48px; color:#471F12; padding:3px"> Team</span></h1>
+                    style="font-size: 48px; color:#f8b29b; padding:3px"> Team</span></h1>
             <div class="mtt1">
                 <div class="mtt2">
                     <img src="https://avatars.githubusercontent.com/u/91674437?v=4" target="_blank" class="img_at_mtt2">
@@ -89,7 +127,7 @@
                     <div class="font_center">
                         <div class="text_deco_mtt"> Prabhnoor Kaur </div>
                         <div class="text_deco_mtt">(LCS2024005)</div>
-                        <div> Style, Content Writer, Designer </div>
+                        <div> HTML, Style, Content Writer, Designer</div>
                     </div>
                 </div>
                 <div class="mtt2">
@@ -97,7 +135,7 @@
                     <div class="font_center">
                         <div class="text_deco_mtt"> Anika Jain </div>
                         <div class="text_deco_mtt">(LCS2024033)</div>
-                        <div> Style, Designer </div>
+                        <div> Style, Designer,HTML,Content Writer</div>
                     </div>
                 </div>
                 <div class="mtt2">
@@ -105,7 +143,7 @@
                     <div class="font_center">
                         <div class="text_deco_mtt"> Ayush Kumar Shukla </div>
                         <div class="text_deco_mtt">(LCS2024007)</div>
-                        <div> Style </div>
+                        <div> HTML,Style </div>
                     </div>
                 </div>
                 <div class="mtt2">
@@ -121,7 +159,7 @@
                     <div class="font_center">
                         <div class="text_deco_mtt"> Insha </div>
                         <div class="text_deco_mtt">(LCS2024011)</div>
-                        <div> Style, JS </div>
+                        <div> HTML, JS </div>
                     </div>
                 </div>
                 <div class="mtt2">
@@ -150,6 +188,7 @@
                 </div>
             </div>
         </section>
+        <br>
         <section class="about-section-main">
             <div class="about-section-upper">
                 <h1>
@@ -181,37 +220,9 @@
                 </div>
             </div>
         </section>
-        <section class="contact-form-master">
-            <div class="a">
-                <div class="callme">
-                    <h1>GET IN</h1>
-                    <h1>TOUCH</h1>
-                    <p><a href="https://github.com/In-Saiyan/Ascent/graphs/contributors">Team Mavenix</a></p>
-                    <p>Indian Institute of Information Technology, Lucknow</p><br><br><br>
-                    <p style="font-size: 0.8em;"> Customer Support Team </p>
-                </div>
-            </div>
-            <div class="b">
-                <form class="form">
-                    First Name<br>
-                    <input type="text" placeholder="Type your First Name" class="text1" spellcheck="false"
-                        required><br><br>
-                    Last Name<br>
-                    <input type="text" placeholder="Type your Last Name" class="text1" spellcheck="false"><br><br>
-                    Contact No<br>
-                    <input type="tel" placeholder="Type your Contact No" class="text1"><br><br>
-                    Email<br>
-                    <input type="email" placeholder="Type your Email" class="text1" required><br><br>
-                    Feedback<br>
-                    <input type="text" placeholder="Give your valuable Feedback or write a Message..... "
-                        class="text2"><br><br><br>
-                    <input type="submit" value="Submit" class="submit">
-                </form>
-            </div>
-        </section>
-        <br>
     </main>
     <footer class="footer" id="footer"></footer>
+    <br>
     <script src="src/js/index.js"></script>
 </body>
 

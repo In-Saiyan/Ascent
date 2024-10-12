@@ -155,25 +155,27 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
 .projects-card {
     display: inline-block;
     height: 60vh;
-    width: calc(100% / 4 - 5%);
+    width: calc(25% - 20px);
     /* background-color: WHITE; */
     border-radius: 20px;
-    border: 2px solid black;
+    border: 2px solid white;
     font-size: 40px;
     /* align-content: center;
     justify-content: center; */
     text-align: center;
     min-width: 250px;
     transition-duration: 0.5s;
-    gap: 20px;
 }
 
 .projects-section {
     display: flex;
+    gap: 20px;
+    padding: 20px;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     font-size: 80px;
     flex-wrap: wrap;
+    
 }
 .mtt-section{
 	display: flex;
@@ -257,13 +259,14 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
     text-align: left;
     margin: 0 auto; 
     flex-wrap: nowrap; 
-    border: #4B1F0E solid;
+    border: white solid;
     border-radius: 22px;
 }
 
 .about-section-upper {
     width: 40%;
     text-align: left;
+    text-align: center;
 }
 
 .about-section-upper h1 {
@@ -294,6 +297,56 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
     line-height: 1.6;
 }
 
+#topbar {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    background-color: #6A2927; 
+    padding: 10px 20px;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: left;
+}
+
+.search-bar {
+    width: 300px;
+    padding: 8px;
+    background-color: #DBB399;
+    border-radius: 15px;
+    border: none;
+    font-size: 16px;
+}
+
+.auth-buttons {
+    gap: 10px;
+}
+
+.login-btn, .signup-btn {
+    padding: 10px 20px;
+    background-color: #8b3f1c;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    background-color: #af4e39;
+}
+
+
+
 @media (max-width: 1024px) {
     .about-section-main {
         flex-direction: column;
@@ -319,7 +372,9 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
     .about-section-upper h1 {
         font-size: 2.5em;
     }
-
+    #topbar{
+        height: 40px;
+    }
     .about-section-description h1 {
         font-size: 2em;
     }
@@ -344,16 +399,3 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
 }
 
 
-/* scrolling with topbar */
-#topbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #6A2826;
-    color: white;
-    z-index: 3;
-    text-align: center;
-    padding: 10px;
-    display: none; /* Hidden initially */
-}
