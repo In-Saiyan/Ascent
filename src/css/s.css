@@ -1,13 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  body{
-    background-color: #f3d3b3;
-  }
-  h1{
+
+  .services-heading{
     font-size: 2.5rem;
     font-family:  Copperplate Gothic Light;
     font-weight: bold;
