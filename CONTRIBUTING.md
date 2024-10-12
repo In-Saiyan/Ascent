@@ -5,4 +5,5 @@ all the javascript files will be inside ./src/css/<name>.js and will be imported
 the code should be clearly formatted(use something like prettier) and should be conventionally named
 all the styling will be done by classes and not BY ID
 ID will only be used as a reference for DOM objects in JS
+dont make unnessecary subfiles in ./src/
  
