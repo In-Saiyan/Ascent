@@ -1,0 +1,153 @@
+.header1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+body {
+    margin: 1%;
+    margin-right: 4%;
+}
+
+div.image {
+    width: 200px;
+    height: 100px;
+}
+
+img {
+    height: 110px;
+}
+
+/* General styling for nav and links */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: white;
+}
+
+li {
+    position: relative;
+}
+
+li a, .dropbtn {
+    text-decoration: none;
+    font-size: 20px ;
+    text-align: left;
+    padding: 10px 40px;
+    color: black;
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Keep the Login link separate */
+.login-link {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+/* Hamburger menu */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+    padding: 14px;
+}
+
+/* Responsive menu styles */
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    ul {
+        display: none; /* Hidden for small screens by default */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute;
+        top: 60px; /* Positioned below the menu icon */
+        left: 0;
+        width: 100%;
+        
+    }
+
+    li a, .dropbtn{
+        font-size: 15px;
+    }
+
+    ul.show {
+        display: block; /* Show menu when toggled */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon on small screens */
+    }
+
+    div.image {
+        width: 80px;
+        height: 50px;
+    }
+
+    img {
+        height: 50px; /* Adjust image size for small screens */
+    }
+
+    .login-link {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        font-size:15px;
+    }
+}
+
+/* For screens larger than 600px */
+@media screen and (min-width: 600px) {
+    nav {
+        justify-content: flex-end; /* Align items to the right */
+    }
+
+    .menu-items {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Move to the right */
+    }
+
+    ul {
+        display: flex;
+    }
+
+    .login-link {
+        margin-left: 20px; /* Add space between links */
+    }
+}
