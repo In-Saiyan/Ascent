@@ -22,7 +22,7 @@ window.onscroll = function () {
     }
 
     const topbar = document.getElementById("topbar");
-    const halfway = document.documentElement.scrollHeight / 5;
+    const halfway = document.documentElement.scrollHeight / 9;
 
     if (scrollPosition > halfway) {
         setTimeout(function () {
