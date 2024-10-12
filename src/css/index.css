@@ -106,7 +106,7 @@ body .main-content .hero-section .hero-content .heros.Contact .hero-background {
 }
 
 body .main-content .hero-section .hero-content .heros.Intro{
-	background: #4B1F0E;
+	background: #8c452a;
 	right: 50%;
 	position: absolute;
 	bottom: 50%;
@@ -114,7 +114,7 @@ body .main-content .hero-section .hero-content .heros.Intro{
 }
 
 body .main-content .hero-section .hero-content .heros.Projects{
-	background: #712723;
+	background: #c0544e;
 	left: 50%;
 	position: absolute;
 	bottom: 50%;
@@ -123,7 +123,7 @@ body .main-content .hero-section .hero-content .heros.Projects{
 }
 
 body .main-content .hero-section .hero-content .heros.About{
-	background: #BE7656;
+	background: #e4a58a;
 	right: 50%;
 	position: absolute;
 	top: 50%;
@@ -132,7 +132,7 @@ body .main-content .hero-section .hero-content .heros.About{
 }
 
 body .main-content .hero-section .hero-content .heros.Contact{
-	background: #794028;
+	background: #b2816c;
 	left: 50%;
 	position: absolute;
 	top: 50%;
