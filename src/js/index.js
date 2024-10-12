@@ -45,3 +45,9 @@ window.onload = function () {
         topbar.style.display = "flex";  
     }
 };
+
+const header = document.getElementById('topbar');
+
+function ToggleHeader(){
+    header.classList.toggle("active");
+}
