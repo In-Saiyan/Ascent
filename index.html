@@ -2,17 +2,44 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" type="image/x-icon" href="src/assets/favicon/favicon.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ascent</title>
+    <link rel="stylesheet" href="./src/css/testimonials.css">
+    <link rel="stylesheet" href="./src/css/s.css">
     <link rel="stylesheet" href="./src/css/form.css">
     <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </head>
 
 <body>
     <header class="header" id="header">
-        <div id="topbar"> <!-- TODO Topbar -->
-            <div class="topbar-login-button"><button>Login</button></div>
+        <div id="topbar"> <!-- DONE Topbar TODO Navbar -->
+            <div class="search-container">
+            	<div class="hamburger-menu" onclick="ToggleHeader()">
+		            <span class="bar bar1"></span>
+		            <span class="bar bar2"></span>
+		            <span class="bar bar3"></span>
+		        </div>
+                <!-- <input type="text" placeholder="Search..." class="search-bar"> -->
+            </div>
+            <div id="Logo" style="height: 100%; aspect-ratio: 1;background-image: url('./src/assets/favicon/favicon.svg');background-size: cover;">
+            	
+            </div>
+            <div class="auth-buttons">
+                <button class="login-btn" onclick="window.open('./signin.html')">Login</button>
+                <button class="signup-btn" onclick="window.open('./signup.html')">Sign Up</button>
+            </div>
+            <nav class="main-nav">
+            	<a href="./introduc.html" class="nav-link">Intro</a>
+            	<a href="#services-section" class="nav-link">Services</a>
+            	<a href="#projects-section" class="nav-link">Projects</a>
+            	<a href="#contact-section" class="nav-link">Contact</a>
+            	<a href="#team-section" class="nav-link">Team</a>
+            	<a href="#about-section" class="nav-link">About</a>
+            </nav>
         </div>
     </header>
     <main class="main-content">
@@ -29,15 +56,141 @@
                 </div>
                 <div class="heros About">
                     <div class="hero-background"></div>
-                    <h1>About</h1>
+                    <h1>Contact</h1>
                 </div>
                 <div class="heros Contact">
                     <div class="hero-background"></div>
-                    <h1>Contact</h1>
+                    <h1>About</h1>
                 </div>
             </div>
         </section>
-        <section class="project-section">
+        <div class="wrapper" id="services-section">
+            <h1 class="services-heading">Services</h1>
+            <div class="border"></div>
+            <div class="cols">
+                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                    <div class="container">
+                        <div class="front" style="background-image: url('src/assets/logos.jpg');">
+                            <div class="inner">
+                                <p>Logo Design</p>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p>Professional logo design services to create unique and memorable brand identities,
+                                    tailored to your vision and business needs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                    <div class="container">
+                        <div class="front" style="background-image:url('src/assets/videoediting.jpg');">
+                            <div class="inner">
+                                <p>Video Editing</p>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p>High-quality video editing services to transform raw footage into engaging and
+                                    polished content, perfect for social media, marketing, and more</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                    <div class="container">
+                        <div class="front" style="background-image: url('src/assets/voiceover.jpg');">
+                            <div class="inner">
+                                <p>Voice Over</p>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p>Professional voice-over services to bring your scripts to life with clear,
+                                    expressive, and engaging narration for commercials, videos, and more</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                    <div class="container">
+                        <div class="front" style="background-image: url('src/assets/ai.jpg');">
+                            <div class="inner">
+                                <p>AI Services</p>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p>Cutting-edge AI services to automate tasks, analyze data, and enhance digital
+                                    experiences, tailored to meet your business needs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                    <div class="container">
+                        <div class="front" style="background-image: url('src/assets/software.jpg');">
+                            <div class="inner">
+                                <p>Software Development</p>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p>Custom software development services to build robust, scalable, and user-friendly
+                                    applications that meet your business goals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                    <div class="container">
+                        <div class="front" style="background-image: url('src/assets/writing.jpg')">
+                            <div class="inner">
+                                <p>Writing and Translation</p>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p>Expert writing and translation services to craft compelling content and accurately
+                                    translate materials for diverse audiences</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                    <div class="container">
+                        <div class="front" style="background-image: url('src/assets/design.jpg')">
+                            <div class="inner">
+                                <p>Design and Creative</p>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p>Innovative design and creative services to bring your ideas to life, from stunning
+                                    visuals to unique branding solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" ontouchstart="this.classList.toggle('hover');">
+                    <div class="container">
+                        <div class="front" style="background-image: url('src/assets/ecomm.jpg')">
+                            <div class="inner">
+                                <p>E Commerce Marketing</p>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p>Comprehensive eCommerce marketing services to boost your online sales through
+                                    targeted strategies, SEO, and engaging content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="project-section" id="projects-section">
             <div class="project-title">
                 <div id="project-background">
                     <div class="project-container"></div>
@@ -60,9 +213,92 @@
             </div>
         </section>
         <br><br>
-        <section class="mtt-section">
+        <section class="testimonials">
+            <div class="innerz">
+                <h1 class="testimonial-h1">WHAT PEOPLE ARE SAYING ABOUT ASCENT</h1>
+                <div class="borderz"></div>
+
+                <div class="rowz">
+                    <div class="colz">
+                        <div class="boxz">
+                            <div class="testimonial">
+                                <img src="src/assets/michaell.jpg" alt="">
+                                <div class="name">Michael J</div>
+
+                                <p> "From developers to designers, writers to marketers, I've found people with every
+                                    skill set imaginable. The collaboration tools are incredibly intuitive, making it
+                                    easy to work together with my team, no matter where they're based. I would highly
+                                    recommend Ascent to everyone!"
+
+                                </p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="colz">
+                        <div class="boxz">
+                            <div class="testimonial">
+                                <img src="src/assets/jessicarobertson.jpg" alt="">
+                                <div class="name">Jessica Robertson</div>
+                                <p>
+                                    "Ascent has been a game-changer for my business. I’ve found incredible professionals
+                                    who deliver high-quality work every time. The process is straightforward, and
+                                    communication is seamless. It’s like having access to a global team of experts at my
+                                    fingertips."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colz">
+                        <div class="boxz">
+                            <div class="testimonial">
+                                <img src="src/assets/alex.jpg" alt="">
+                                <div class="name">Alex Claremont</div>
+                                <p>
+                                    "Every project I've posted on Ascent has been a success. The freelancers are
+                                    professional, skilled, and dedicated. I appreciate how seamless the collaboration
+                                    feels, even with members in different time zones. It’s made managing work so much
+                                    easier!"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-form-master" id="contact-section">
+            <div class="a">
+                <div class="callme">
+                    <h1>GET IN</h1>
+                    <h1>TOUCH</h1>
+                    <p><a href="https://github.com/In-Saiyan/Ascent/graphs/contributors">Team Mavenix</a></p>
+                    <p>Indian Institute of Information Technology, Lucknow</p><br><br><br>
+                    <p style="font-size: 0.8em;"> Customer Support Team </p>
+                </div>
+            </div>
+            <div class="b">
+                <form class="form">
+                    First Name<br>
+                    <input type="text" placeholder="Type your First Name" class="text1" spellcheck="false"
+                        required><br><br>
+                    Last Name<br>
+                    <input type="text" placeholder="Type your Last Name" class="text1" spellcheck="false"><br><br>
+                    Contact No<br>
+                    <input type="tel" placeholder="Type your Contact No" class="text1"><br><br>
+                    Email<br>
+                    <input type="email" placeholder="Type your Email" class="text1" required><br><br>
+                    Feedback<br>
+                    <input type="text" placeholder="Give your valuable Feedback or write a Message..... "
+                        class="text2"><br><br><br>
+                    <input type="submit" value="Submit" class="submit">
+                </form>
+            </div>
+        </section>
+
+        <section class="mtt-section" id="team-section">
             <h1 class="mtt3" style="font-size: 40px;"> Meet the <span
-                    style="font-size: 48px; color:#471F12; padding:3px"> Team</span></h1>
+                    style="font-size: 48px; color:#f8b29b; padding:3px"> Team</span></h1>
             <div class="mtt1">
                 <div class="mtt2">
                     <img src="https://avatars.githubusercontent.com/u/91674437?v=4" target="_blank" class="img_at_mtt2">
@@ -85,7 +321,7 @@
                     <div class="font_center">
                         <div class="text_deco_mtt"> Prabhnoor Kaur </div>
                         <div class="text_deco_mtt">(LCS2024005)</div>
-                        <div> Style, Content Writer, Designer </div>
+                        <div> HTML, Style, Content Writer, Designer</div>
                     </div>
                 </div>
                 <div class="mtt2">
@@ -93,7 +329,7 @@
                     <div class="font_center">
                         <div class="text_deco_mtt"> Anika Jain </div>
                         <div class="text_deco_mtt">(LCS2024033)</div>
-                        <div> Style, Designer </div>
+                        <div> Style, Designer,HTML,Content Writer</div>
                     </div>
                 </div>
                 <div class="mtt2">
@@ -101,7 +337,7 @@
                     <div class="font_center">
                         <div class="text_deco_mtt"> Ayush Kumar Shukla </div>
                         <div class="text_deco_mtt">(LCS2024007)</div>
-                        <div> Style </div>
+                        <div> HTML,Style </div>
                     </div>
                 </div>
                 <div class="mtt2">
@@ -117,7 +353,7 @@
                     <div class="font_center">
                         <div class="text_deco_mtt"> Insha </div>
                         <div class="text_deco_mtt">(LCS2024011)</div>
-                        <div> Style, JS </div>
+                        <div> HTML, JS </div>
                     </div>
                 </div>
                 <div class="mtt2">
@@ -146,16 +382,14 @@
                 </div>
             </div>
         </section>
-        <section class="about-section-main">
+        <br>
+        <section class="about-section-main" id="about-section">
             <div class="about-section-upper">
                 <h1>
                     About us
                 </h1>
             </div>
             <div class="about-section-lower">
-                <!-- <div class="about-section-image">
-
-                </div> -->
                 <div class="about-section-description">
                     <h1>
                         Join us in our "Ascent"
@@ -177,37 +411,30 @@
                 </div>
             </div>
         </section>
-        <section class="contact-form-master">
-            <div class="a">
-                <div class="callme">
-                    <h1>GET IN</h1>
-                    <h1>TOUCH</h1>
-                    <p><a href="https://github.com/In-Saiyan/Ascent/graphs/contributors">Team Mavenix</a></p>
-                    <p>Indian Institute of Information Technology, Lucknow</p><br><br><br>
-                    <p style="font-size: 0.8em;"> Customer Support Team </p>
-                </div>
-            </div>
-            <div class="b">
-                <form class="form">
-                    First Name<br>
-                    <input type="text" placeholder="Type your First Name" class="text1" spellcheck="false"
-                        required><br><br>
-                    Last Name<br>
-                    <input type="text" placeholder="Type your Last Name" class="text1" spellcheck="false"><br><br>
-                    Contact No<br>
-                    <input type="tel" placeholder="Type your Contact No" class="text1"><br><br>
-                    Email<br>
-                    <input type="email" placeholder="Type your Email" class="text1" required><br><br>
-                    Feedback<br>
-                    <input type="text" placeholder="Give your valuable Feedback or write a Message..... "
-                        class="text2"><br><br><br>
-                    <input type="submit" value="Submit" class="submit">
-                </form>
-            </div>
-        </section>
-        <br>
     </main>
-    <footer class="footer" id="footer"></footer>
+    <br>
+    <footer class="footer" id="footer">
+            <div class="social-footer">
+                <a href="https://facebook.com" class="social-btn facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i><span>Facebook</span>
+                </a>
+                <a href="https://instagram.com" class="social-btn instagram" target="_blank">
+                    <i class="fab fa-instagram"></i><span>Instagram</span>
+                </a>
+                <a href="https://linkedin.com" class="social-btn linkedin" target="_blank">
+                    <i class="fab fa-linkedin-in"></i><span>LinkedIn</span>
+                </a>
+                <a href="https://youtube.com" class="social-btn youtube" target="_blank">
+                    <i class="fab fa-youtube"></i><span>YouTube</span>
+                </a>
+                <a href="https://github.com" class="social-btn github" target="_blank">
+                    <i class="fab fa-github"></i><span>GitHub</span>
+                </a>
+            </div>
+
+
+    </footer>
+    <br>
     <script src="src/js/index.js"></script>
 </body>
 

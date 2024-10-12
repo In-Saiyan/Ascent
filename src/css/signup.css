@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
 body{
     height: 100vh;
     width: 100%;
     margin: 0;
     display:  inline-flex;
     overflow: hidden;
-    font-family: sans-serif;
+    font-family: jost,sans-serif;
 }
 .a{
     display: flex;
     height: 100%;
     width: 50%;
-    background-color: teal;
+    background-color: #4B1E0F;
   
 }
 .b{
@@ -43,7 +45,11 @@ body{
     margin-top: 10%;
     height: 80%;
     width: 80%;
-    background-color: teal;
+    background-image: url("https://plus.unsplash.com/premium_photo-1669842336797-4dfc03afa025?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnJvd258ZW58MHx8MHx8fDA%3D");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #794028;
+    background-size: cover;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px ;
     /* border: solid; */
@@ -60,25 +66,20 @@ label{
     font-size: 16px;
     color: #333;
     
-    }
-#email{
-    width: 350px;
-    height: 10px;
-    padding: 10px;
-    border: 2px solid teal;
-    border-radius: 5px;
-    margin-top: 7px;
-    
-
 }
-#Password{
+
+#email, #Password{
     width: 350px;
     height: 10px;
     padding: 10px;
     border-radius: 5px;
-    border: 2px solid teal;
+    border: 2px solid #794028;
     margin-top: 7px;
-    border-color: teal;
+    outline: none !important;
+    transition: all 0.3s ease;
+}
+#email:focus-visible, #Password:focus-visible, #email:active, #Password:active, #email:focus, #Password:focus {
+    border-color: #BF7657;
 }
 #checkbox{
     margin: 0%;
@@ -86,15 +87,18 @@ label{
 #Log{
     width: 370px;
     height: 40px;
-   border: 2px solid transparent;
+    border: 2px solid transparent;
     border-radius: 5px;
-    
     margin-top: 10px;
     margin-bottom: 0px;
     font-size: larger;
     color:white;
-    background-color: teal;
-
+    background-color: #794028;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+#Log:hover{
+    background-color: #BF7657;
 }
 #continue{
     width: 370px;
@@ -104,8 +108,46 @@ label{
     border-radius: 5px;
     font-size: larger;
     color: black;
+    cursor: pointer;
 }
 p{
-    margin-top: 4px;
+    text-align: center;
+    margin-top: 12px;
     font-weight: 500;
+}
+
+@media screen and (max-width: 1100px){
+    .b{
+        display: none;
+    }
+    .a {
+        width: 100%;
+        align-items: center;
+    }
+    .left {
+        margin: 10%;
+        height: fit-content;
+        border-radius: 15px;
+        border-right: 10px solid black;
+        min-height: 480px;
+        padding: 30px;
+    } 
+    #email, #Password{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    p {
+        display: flex;
+        flex-direction: column;
+    }
+    b {
+        display: none;
+    }
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    #email, #Password, #Log, #continue{
+        width: 100%;
+    }
 }
