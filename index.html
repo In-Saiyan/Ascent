@@ -18,12 +18,28 @@
     <header class="header" id="header">
         <div id="topbar"> <!-- DONE Topbar TODO Navbar -->
             <div class="search-container">
-                <input type="text" placeholder="Search..." class="search-bar">
+            	<div class="hamburger-menu" onclick="ToggleHeader()">
+		            <span class="bar bar1"></span>
+		            <span class="bar bar2"></span>
+		            <span class="bar bar3"></span>
+		        </div>
+                <!-- <input type="text" placeholder="Search..." class="search-bar"> -->
+            </div>
+            <div id="Logo" style="height: 100%; aspect-ratio: 1;background-image: url('./src/assets/favicon/favicon.svg');background-size: cover;">
+            	
             </div>
             <div class="auth-buttons">
                 <button class="login-btn" onclick="window.open('./signin.html')">Login</button>
                 <button class="signup-btn" onclick="window.open('./signup.html')">Sign Up</button>
             </div>
+            <nav class="main-nav">
+            	<a href="./introduc.html" class="nav-link">Intro</a>
+            	<a href="#services-section" class="nav-link">Services</a>
+            	<a href="#projects-section" class="nav-link">Projects</a>
+            	<a href="#contact-section" class="nav-link">Contact</a>
+            	<a href="#team-section" class="nav-link">Team</a>
+            	<a href="#about-section" class="nav-link">About</a>
+            </nav>
         </div>
     </header>
     <main class="main-content">
@@ -40,15 +56,15 @@
                 </div>
                 <div class="heros About">
                     <div class="hero-background"></div>
-                    <h1>About</h1>
+                    <h1>Contact</h1>
                 </div>
                 <div class="heros Contact">
                     <div class="hero-background"></div>
-                    <h1>Contact</h1>
+                    <h1>About</h1>
                 </div>
             </div>
         </section>
-        <div class="wrapper">
+        <div class="wrapper" id="services-section">
             <h1 class="services-heading">Services</h1>
             <div class="border"></div>
             <div class="cols">
@@ -174,7 +190,7 @@
                 </div>
             </div>
         </div>
-        <section class="project-section">
+        <section class="project-section" id="projects-section">
             <div class="project-title">
                 <div id="project-background">
                     <div class="project-container"></div>
@@ -255,7 +271,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact-form-master">
+        <section class="contact-form-master" id="contact-section">
             <div class="a">
                 <div class="callme">
                     <h1>GET IN</h1>
@@ -284,7 +300,7 @@
             </div>
         </section>
 
-        <section class="mtt-section">
+        <section class="mtt-section" id="team-section">
             <h1 class="mtt3" style="font-size: 40px;"> Meet the <span
                     style="font-size: 48px; color:#f8b29b; padding:3px"> Team</span></h1>
             <div class="mtt1">
@@ -371,7 +387,7 @@
             </div>
         </section>
         <br>
-        <section class="about-section-main">
+        <section class="about-section-main" id="about-section">
             <div class="about-section-upper">
                 <h1>
                     About us
@@ -402,7 +418,6 @@
     </main>
     <br>
     <footer class="footer" id="footer">
-        <footer>
             <div class="social-footer">
                 <a href="https://facebook.com" class="social-btn facebook" target="_blank">
                     <i class="fab fa-facebook-f"></i><span>Facebook</span>
@@ -420,7 +435,6 @@
                     <i class="fab fa-github"></i><span>GitHub</span>
                 </a>
             </div>
-        </footer>
 
 
     </footer>
