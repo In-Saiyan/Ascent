@@ -8,17 +8,19 @@
     <title>Ascent</title>
     <link rel="stylesheet" href="./src/css/form.css">
     <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </head>
 
 <body>
     <header class="header" id="header">
-        <div id="topbar"> <!-- TODO Topbar -->
+        <div id="topbar"> <!-- DONE Topbar TODO Navbar -->
             <div class="search-container">
                 <input type="text" placeholder="Search..." class="search-bar">
             </div>
             <div class="auth-buttons">
-                <button class="login-btn">Login</button>
-                <button class="signup-btn">Sign Up</button>
+                <button class="login-btn" onclick="window.open('./signin.html')">Login</button>
+                <button class="signup-btn" onclick="window.open('./signup.html')">Sign Up</button>
             </div>
         </div>
     </header>
@@ -196,9 +198,6 @@
                 </h1>
             </div>
             <div class="about-section-lower">
-                <!-- <div class="about-section-image">
-
-                </div> -->
                 <div class="about-section-description">
                     <h1>
                         Join us in our "Ascent"
@@ -221,7 +220,30 @@
             </div>
         </section>
     </main>
-    <footer class="footer" id="footer"></footer>
+    <br>
+    <footer class="footer" id="footer">
+        <footer>
+            <div class="social-footer">
+              <a href="https://facebook.com" class="social-btn facebook" target="_blank">
+                <i class="fab fa-facebook-f"></i><span>Facebook</span>
+              </a>
+              <a href="https://instagram.com" class="social-btn instagram" target="_blank">
+                <i class="fab fa-instagram"></i><span>Instagram</span>
+              </a>
+              <a href="https://linkedin.com" class="social-btn linkedin" target="_blank">
+                <i class="fab fa-linkedin-in"></i><span>LinkedIn</span>
+              </a>
+              <a href="https://youtube.com" class="social-btn youtube" target="_blank">
+                <i class="fab fa-youtube"></i><span>YouTube</span>
+              </a>
+              <a href="https://github.com" class="social-btn github" target="_blank">
+                <i class="fab fa-github"></i><span>GitHub</span>
+              </a>
+            </div>
+          </footer>
+          
+            
+    </footer>
     <br>
     <script src="src/js/index.js"></script>
 </body>

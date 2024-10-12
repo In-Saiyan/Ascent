@@ -326,6 +326,15 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
     border: none;
     font-size: 16px;
 }
+.search-bar:hover, .search-bar:focus{
+    border-color: #1d1212;
+    outline-style: none;
+    transition-duration: 0.3s;
+}
+
+.search-bar:hover::placeholder, .search-bar:focus::placeholder{
+    color: transparent;
+}
 
 .auth-buttons {
     gap: 10px;
@@ -397,5 +406,80 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
         font-size: 0.9em;
     }
 }
+
+footer {
+    background-color: #1d1212;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #444;
+    color: white;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 17px;  
+    justify-content: flex-start;
+    text-decoration: none;
+  }
+  
+  .social-btn i {
+    font-size: 20px;
+  }
+  
+  .social-btn span {
+    /* position: absolute; */
+    /* left: 50px; */
+    padding: 10px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .social-btn:hover {
+    width: 120px;
+    border-radius: 25px;
+    background-color: #007bff; /* Change the background color on hover */
+  }
+  
+  .social-btn:hover span {
+    opacity: 1;
+  }
+  
+  .facebook:hover {
+    background-color: #3b5998;
+  }
+  
+  .instagram:hover {
+    background-color: #e4405f;
+  }
+  
+  .linkedin:hover {
+    background-color: #0077b5;
+  }
+  
+  .youtube:hover {
+    background-color: #ff0000;
+  }
+  
+  .github:hover {
+    background-color: #333;
+  }
+  
 
 
