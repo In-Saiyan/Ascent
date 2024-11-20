@@ -46,6 +46,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-blend-mode: overlay;
+  background-color: #0009;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

@@ -3,9 +3,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
-    max-width: 100vw;
     width: 90%;
-    gap: 0;
     margin: 5%;
     border: white solid;
     border-radius: 22px;
@@ -15,7 +13,6 @@
     max-width: 30vw;
     background-color: #BE7656;
     text-align: center;
-    flex: 1;
     padding: 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -37,17 +34,14 @@
 }
 
 .text1, .text2 {
-    background-color: #EFC3A4;
-    border: solid #794028 2px;
+    background-color: #0003;
     border-radius: 8px;
     padding: 10px;
     width: 100%;
-    box-sizing: border-box;
+    border: none !important;
+    outline: none !important;
 }
 
-.text2 {
-    height: 100px;
-}
 
 .form {
     gap: 9px;
@@ -62,11 +56,14 @@
     background-color: #BE7656;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     color: white;
     width: 100px;
     align-self: flex-end;
     margin-top: 10px;
+    padding: 10px 0;
+    border: none !important;
+    outline: none !important;
 }
 
 .submit:hover {
@@ -77,12 +74,8 @@
     border: solid #472012 2px;
 }
 
-text2{
+.text2{
     text-align: left;
-}
-
-.text1:hover::placeholder, .text2:hover::placeholder {
-    color: transparent;
 }
 .submit:focus {
     background-color: #794028;
@@ -90,12 +83,12 @@ text2{
 
 .text1:focus, .text2:focus {
     border: solid #472012 2px;
-    outline-style: none;
 }
 
-.text1:focus::placeholder, .text2:focus::placeholder {
-    color: transparent;
+.text1::placeholder, .text2::placeholder {
+    color: #000;
 }
+
 
 @media (max-width: 1024px) {
     .contact-form-master {
@@ -143,7 +136,8 @@ text2{
 
 @media (max-width: 480px) {
     .contact-form-master {
-        padding: 10px;
+        border: none;
+        margin-bottom: 48px;
     }
 
     .a, .b {
