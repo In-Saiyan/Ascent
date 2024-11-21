@@ -1,27 +1,26 @@
   .testimonials{
     padding: 67.5px 0;
-    /* background:  #752d2c ; */
+    
     color: black;
     display: flex;
     justify-content: center;
     text-align: center;
     position: relative;
     z-index: 1;
-    /* background-color: #752d2c; */
+    
   }
   .testimonial-h1{
     color: white;
   }
   .testimonials::after {
-    /* content: ""; */
+    
     display: table;
     clear: both;
   }
   .innerz{
     max-width: 1200px;
     margin: auto;
-    /* overflow: hidden; */
-/*    padding: 0 30px;*/
+    
   }
   
   .borderz{
@@ -43,16 +42,15 @@
     padding: 15px;
   }
   .boxz {
-    /* width: 400px;
-    height: 300px; */
+  
     display: flex;
     justify-content: center;
     align-items: center;
     color:black;
-    /* padding:20px; */
+    
     transition: transform 0.3s, background-color 0.3s;
     cursor: pointer;
-    /* margin: 20px; */
+    
 }
 
 
