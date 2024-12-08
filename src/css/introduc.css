@@ -1,7 +1,26 @@
+:root {
+    --bg-0-color: #181824;
+    --bg-1-color: #1e1e2e;
+    --bg-2-color: #2a2a3b;
+    --bg-3-color: #36364d;
+    --bg-4-color: #424256;
+    --bg-5-color: #4e4e66;
+    --caret-color: #f2cdcd;
+    --main-color: #cba6f7;
+    --sub-color: #7f849c;
+    --sub-alt-color: #181825;
+    --text-color: #cdd6f4;
+    --error-color: #f38ba8;
+    --error-extra-color: #eba0ac;
+    --colorful-error-color: #f38ba8;
+    --colorful-error-color-dark: #5c2f3b;
+    --colorful-error-extra-color: #eba0ac;
+  }
+
 h1{
 	margin-top: 175px;
     font-size: 4em;
-    color: #333;
+    color: var(--sub-color);
     animation: fadeInUp 1.2s ease-in-out;
     text-align: center;
     font-family: sans-serif;
@@ -9,7 +28,7 @@ h1{
 }
 
 h1 span{
-    color: white;
+    color: var(--text-color);
 	font-family:  Copperplate Gothic Light;
 }
 
@@ -33,7 +52,7 @@ h1 span{
 
 .card {
 	padding: 10px;
-	background: #EED8B8;
+	background: var(--main-color);
 	border-radius: .7em;
 	opacity: 0.8;
 	display: flex;
@@ -183,7 +202,7 @@ html {
 }
 body {
 	font-family: "PT Sans", sans-serif;
-	background: #9e4542;
+	background: var(--bg-0-color);
 	display: flex;
 	justify-content: center;
 	align-items: center;
