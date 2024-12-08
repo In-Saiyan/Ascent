@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-0-color: #181824;
+    --bg-1-color: #1e1e2e;
+    --bg-2-color: #2a2a3b;
+    --bg-3-color: #36364d;
+    --bg-4-color: #424256;
+    --bg-5-color: #4e4e66;
+    --caret-color: #f2cdcd;
+    --main-color: #cba6f7;
+    --sub-color: #7f849c;
+    --sub-alt-color: #181825;
+    --text-color: #cdd6f4;
+    --error-color: #f38ba8;
+    --error-extra-color: #eba0ac;
+    --colorful-error-color: #f38ba8;
+    --colorful-error-color-dark: #5c2f3b;
+    --colorful-error-extra-color: #eba0ac;
+  }
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 50px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+	/* width: 100%;
+	height: 100%; */
+	font-family: "Jost", sans-serif;
+    transition: background-color 0.5s ease;
+    background-color: var(--bg-2-color);
+    /* overflow: hidden; */
+    color: #ccc;
+}
+
+#topbar {
+    opacity: 1;
+    display: flex;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    background-color: var(--bg-0-color); 
+    padding: 10px 20px;
+    flex-direction: row;
+    align-items: center;
+    z-index: 99999; 
+    justify-content: space-between;
+}
+
+#topbar::before {
+    content:'';
+    opacity: inherit;
+    transition: opacity 0.3s ease;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-0-color);
+    z-index: -1; 
+}
+
+#topbar .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100lvh;
+    width: 0;
+    background: var(--bg-0-color);
+    background-image: url("https://raw.githubusercontent.com/orangci/walls-catppuccin-mocha/master/abstract-swirls.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    z-index: -1;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+#topbar.active .main-nav {
+    width: 380px;
+}
+
+#topbar .hamburger-menu {
+    height: 40px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    left: 18px;
+    top: 6px;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+}
+
+#topbar .hamburger-menu .bar {
+    width: 100%;
+    display: flex;
+    height: 4px;
+    background-color: var(--caret-color);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/*#topbar.active .hamburger-menu .bar{
+    background-color: #32AD85;
+}*/
+
+#topbar.active .hamburger-menu .bar.bar1 {
+    transform: rotate(45deg) translate(8px,8px);
+}
+
+#topbar.active .hamburger-menu .bar.bar2 {
+    opacity: 0;
+}
+
+#topbar.active .hamburger-menu .bar.bar3 {
+    transform: rotate(-45deg) translate(9px,-9px);
+}
+
+#topbar .main-nav .nav-link {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    text-shadow: 0px 0px 10px #0006;
+    transition: all 0.3s ease;
+}
+
+#topbar .main-nav .nav-link:hover {
+    color: var(--sub-color);
+}
+
+#topbar::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100lvh;
+    width: 100%;
+    background: #0003;
+    backdrop-filter: blur(10px);
+    z-index: -5;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+#topbar.active::after{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.profilemain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 50px);
+    height: 100%;;
+    /* height: 100%; */
+    align-items: center;
+}
+
+.pdivleft {
+    width: 25%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.pdivright {
+    display: flex;
+    width: 70%;
+    /* height: 100vh; */
+    overflow: scroll;
+    /* max-height: 100vh; */
+    padding: 30px;
+    padding-left: 40px;
+}
+
+.profilesection {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.75rem;
+    img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        /* margin-top: 80px; */
+    }
+    h1 {
+        color: white;
+    }
+    p {
+        color: aliceblue;
+    }
+}
+
+.pratings {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.borderz {
+    width: 400px;
+    height: 3px;
+    background: azure;
+    margin: 20px;
+    border-radius: 3px;
+}
+
+.pcards {
+    text-align: center;
+    width: 90%;
+    padding: 5px;
+}
+
+.cards {
+    text-align: left;
+    h1 {
+        font-size: 20px;
+    }
+    border-radius: 10px;
+    background: #fff1;
+    padding: 0.5rem;
+    margin: 0.6rem 0;
+}
+
+.profilemain {
+    width: 100%;
+    min-height: calc(100vh - 50px); 
+    align-items: center;
+}
+
+.pdivleft {
+    /* width: 25%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%; 
+}
+
+.pdivright {
+    display: flex;
+    /* width: 70%; */
+    overflow-y: auto;
+    overflow-x: unset;
+    /* max-height: calc(100vh - 50px);  */
+}
+
+.profiler{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 1350px){
+    .pdivleft{
+        width: 35%;
+    }
+    .pdivright{
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 900px){
+    .pdivleft{
+        width: 45%;
+    }
+    .pdivright{
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .pdivleft{
+        width: 95%;
+    }
+    .pdivright{
+        width: 95%;
+    }
+    .profilemain{
+        flex-direction: column;
+    }
+}
+
+
+
+
+/* footer{
+    height: 50px;
+    background-color: #0006;
+} */
+
+
+
+.logout-btn {
+    padding: 10px 20px;
+    background-color: var(--colorful-error-color);
+    border: none;
+    color: var(--bg-0-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: var(--main-color);
+}

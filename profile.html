@@ -1,0 +1,97 @@
+<!-- Made By Aryan Singh -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./src/css/profile.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div id="topbar"> <!-- DONE Topbar TODO Navbar -->
+            <div class="search-container">
+            	<div class="hamburger-menu" onclick="ToggleHeader()">
+		            <span class="bar bar1"></span>
+		            <span class="bar bar2"></span>
+		            <span class="bar bar3"></span>
+		        </div>
+                <!-- <input type="text" placeholder="Search..." class="search-bar"> -->
+            </div>
+            <div id="Logo" style="height: 100%; aspect-ratio: 1;background-image: url('./src/assets/favicon/favicon.svg');background-size: cover;">
+            	
+            </div>
+            <div class="auth-buttons">
+                <button class="logout-btn">Logout</button>
+            </div>
+            <nav class="main-nav">
+            	<a href="./introduc.html" class="nav-link">Intro</a>
+            	<a href="./index.html#services-section" class="nav-link">Services</a>
+            	<a href="./index.html#projects-section" class="nav-link">Projects</a>
+            	<a href="./index.html#contact-section" class="nav-link">Contact</a>
+            	<a href="./index.html#team-section" class="nav-link">Team</a>
+            	<a href="./index.html#about-section" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+    <main class="profilemain">
+        <section class="pdivleft">
+            <div class="profilesection">
+                <img src="https://avatars.githubusercontent.com/u/91674437?v=4">
+                <h1>Aryan Singh</h1>
+                <p>Backend Developer</p>
+                <br>
+                &nbsp;
+                <p class="pratings"><span>Rating: 4009</span> <span>&starf;&starf;&starf;&starf;&starf;</span></p>
+                <div class="borderz"></div>
+
+                <div class="pcards card1">
+                    <h1>Last Projects</h1>
+                </div>
+                <div class="pcards cards">
+                    <h1>Project 1</h1>
+                    <p>Description</p>
+                </div>
+                <div class="pcards cards">
+                    <h1>Project 2</h1>
+                    <p>Description</p>
+                </div>
+                <div class="pcards cards">
+                    <h1>Project 3</h1>
+                    <p>Description</p>
+                </div>
+            </div>
+        </section>
+        <section class="pdivright">
+            <div class="profiler">
+                <div class="aboutmer">
+                  <h2>About Me</h2>
+                  <p>Hello! I’m Aryan Singh, based in Lucknow, Uttar Pradesh, India. I am passionate about coding, technology, and creating impactful solutions through software. With a focus on clean and efficient code, I strive to deliver quality in every project I undertake.</p>
+                </div>
+                <div class="skillsr">
+                  <h2>Skills</h2>
+                  <ul>
+                    <li>Python: Expertise in building backend systems and scripting solutions.</li>
+                    <li>JavaScript: Experienced in crafting interactive web interfaces.</li>
+                    <li>React: Proficient in developing dynamic and responsive applications.</li>
+                  </ul>
+                  <br>
+                  <img src="https://go-skill-icons.vercel.app/api/icons?i=js,html,css,c,cpp,debian,arch,python,react,mysql,mongodb,git,nodejs,vim,terminal,bash,ffmpeg,kitty,manjaro,htop,hyprland,discordjs,vscode,notion,github,photoshop,ubuntu,kali,windows,linux,kde,gnome,markdown,latex,matplotlib,pandas,numpy,wsl,obsidian,selenium,sublime,vscodium,replit,neovim" style="width: 100%;">
+                </div>
+                <div class="qualificationsr">
+                  <h2>Qualifications</h2>
+                  <p>Bachelor of Technology (B.Tech) in Information Technology from IIIT Lucknow. My academic journey honed my problem-solving skills and gave me a solid foundation in computer science and software engineering.</p>
+                </div>
+              </div>
+              
+        </section>
+    </main>
+    <script>
+        const header = document.getElementById('topbar');
+
+        function ToggleHeader(){
+            header.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
