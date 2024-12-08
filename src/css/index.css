@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+    scroll-behavior: smooth !important;
+}
+
+
+body {
     --bg-0-color: #181824;
     --bg-1-color: #1e1e2e;
     --bg-2-color: #2a2a3b;
@@ -17,25 +25,38 @@
     --colorful-error-color: #f38ba8;
     --colorful-error-color-dark: #5c2f3b;
     --colorful-error-extra-color: #eba0ac;
-  }
-
-* {
-	margin: 0;
-	box-sizing: border-box;
-    scroll-behavior: smooth !important;
-}
-
-
-body {
-	width: 100%;
-	height: 100%;
-	font-family: "Jost", sans-serif;
-	transition: background-color 0.5s ease;
-	margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Jost", sans-serif;
+    transition: background-color 0.5s ease;
+    margin: 0;
     padding: 0;
     transition: background-color 0.5s ease;
     background-color: var(--bg-2-color);
     color: var(--text-color);
+}
+
+body.light {
+    --bg-0-color: #ffffff; /* Lightest background */
+    --bg-1-color: #f8f9fa; /* Slightly darker background */
+    --bg-2-color: #e9ecef; /* Even darker, for cards or containers */
+    --bg-3-color: #dee2e6; /* Borders or subtle contrasts */
+    --bg-4-color: #ced4da; /* Deeper accent contrasts */
+    --bg-5-color: #adb5bd; /* Further emphasis */
+    --caret-color: #9d4edd; /* Complementary accent color */
+    --main-color: #6a40cf; /* Primary action or highlight */
+    --sub-color: #495057; /* Subtle text or secondary actions */
+    --sub-alt-color: #f8f9fa; /* Alternative background for separation */
+    --text-color: #212529; /* Standard readable text color */
+    --error-color: #d63031; /* Error message or danger accents */
+    --error-extra-color: #ff6b6b; /* Softer error highlight */
+    --colorful-error-color: #d63031; /* Match error base */
+    --colorful-error-color-dark: #9b1d1d; /* Darker version for depth */
+    --colorful-error-extra-color: #ff6b6b; /* Matching error highlight */
+}
+
+.light #Logo, .light .hero-logo {
+    filter: invert(1);
 }
 
 body .main-content .hero-section {
@@ -45,7 +66,7 @@ body .main-content .hero-section {
 	position: relative;
 	top: 0;
 	left: 0;
-	background-color: #1b1b1b; /* Dark background */
+	background-color: #1b1b1b;
     transition: background-color 0.5s ease;
 }
 
@@ -164,7 +185,8 @@ body .main-content .hero-section .hero-content .heros.Contact{
 }
 
 body .main-content .hero-section .hero-content .heros h1 {
-	color: white;
+	color: #FFF;
+    text-shadow: 0 0 4px #0004;
 	font-size: 3rem;
 	transform: rotate(6deg);
 	opacity: 0;
@@ -186,7 +208,7 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
     min-width: 250px;
     transition: all 0.5s ease;
     background-size: cover;
-    background-color: #0019;
+    background-color: var(--bg-4-color);
     background-blend-mode: overlay;
     align-content: center;
     justify-content: center;
@@ -266,10 +288,12 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
 }
 .projects-card .h {
     font-weight: 600;
+    text-shadow: 0px 0px 4px #0003;
 }
 .projects-card .p {
     font-size: 18px;
     overflow: hidden;
+    text-shadow: 0px 0px 4px #0003;
     height: 0;
     padding: 0 10px;
     transition: all 0.5s ease;  
@@ -344,7 +368,7 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
     text-align: left;
     margin: 0 auto; 
     flex-wrap: nowrap; 
-    border: white solid;
+    border: var(--bg-5-color) solid;
     border-radius: 22px;
 }
 
@@ -535,6 +559,18 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
 
 .auth-buttons {
     gap: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    img {
+        filter: invert(1);
+        content: url(https://www.svgrepo.com/show/343931/sun-fill.svg);
+    }
+}
+
+.light .auth-buttons img{
+    content: url(https://www.svgrepo.com/show/344284/moon-fill.svg);
+    filter: none;
 }
 
 .login-btn, .signup-btn {

@@ -1,23 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-    --bg-0-color: #181824;
-    --bg-1-color: #1e1e2e;
-    --bg-2-color: #2a2a3b;
-    --bg-3-color: #36364d;
-    --bg-4-color: #424256;
-    --bg-5-color: #4e4e66;
-    --caret-color: #f2cdcd;
-    --main-color: #cba6f7;
-    --sub-color: #7f849c;
-    --sub-alt-color: #181825;
-    --text-color: #cdd6f4;
-    --error-color: #f38ba8;
-    --error-extra-color: #eba0ac;
-    --colorful-error-color: #f38ba8;
-    --colorful-error-color-dark: #5c2f3b;
-    --colorful-error-extra-color: #eba0ac;
-  }
 
 *{
     margin: 0;
@@ -36,6 +18,41 @@ body {
     background-color: var(--bg-2-color);
     /* overflow: hidden; */
     color: #ccc;
+    --bg-0-color: #181824;
+    --bg-1-color: #1e1e2e;
+    --bg-2-color: #2a2a3b;
+    --bg-3-color: #36364d;
+    --bg-4-color: #424256;
+    --bg-5-color: #4e4e66;
+    --caret-color: #f2cdcd;
+    --main-color: #cba6f7;
+    --sub-color: #7f849c;
+    --sub-alt-color: #181825;
+    --text-color: #cdd6f4;
+    --error-color: #f38ba8;
+    --error-extra-color: #eba0ac;
+    --colorful-error-color: #f38ba8;
+    --colorful-error-color-dark: #5c2f3b;
+    --colorful-error-extra-color: #eba0ac;
+}
+
+body.light {
+    --bg-0-color: #ffffff; /* Lightest background */
+    --bg-1-color: #f8f9fa; /* Slightly darker background */
+    --bg-2-color: #e9ecef; /* Even darker, for cards or containers */
+    --bg-3-color: #dee2e6; /* Borders or subtle contrasts */
+    --bg-4-color: #ced4da; /* Deeper accent contrasts */
+    --bg-5-color: #adb5bd; /* Further emphasis */
+    --caret-color: #9d4edd; /* Complementary accent color */
+    --main-color: #6a40cf; /* Primary action or highlight */
+    --sub-color: #495057; /* Subtle text or secondary actions */
+    --sub-alt-color: #f8f9fa; /* Alternative background for separation */
+    --text-color: #212529; /* Standard readable text color */
+    --error-color: #d63031; /* Error message or danger accents */
+    --error-extra-color: #ff6b6b; /* Softer error highlight */
+    --colorful-error-color: #d63031; /* Match error base */
+    --colorful-error-color-dark: #9b1d1d; /* Darker version for depth */
+    --colorful-error-extra-color: #ff6b6b; /* Matching error highlight */
 }
 
 #topbar {
