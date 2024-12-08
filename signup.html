@@ -17,11 +17,11 @@
                     <br> <label for="email">Email</label>
                     <br> <input type="Email" id="email" name="email" required>
                     <br><br> <label for="Password">Password</label>
-                    <br> <input type="Password" id="Password">
+                    <br> <input type="Password" id="Password" class="Password" minlength="8" required>
                     <br><br> <label for="Confirm Password">Confirm Password</label>
-                    <br> <input type="Confirm Password" id="Password">
-                    <br> <br> <input type="submit" name="Log" id="Log" value="Sign Up">
-                    <br> <br> <input type="submit" name="continue" id="continue" value="Continue with Google">
+                    <br> <input type="Password" id="Password" class="Confirm" minlength="8" required>
+                    <br> <br> <input type="submit" name="Log" id="Log" onclick="validate()" value="Sign Up">
+                    <br> <br> <input type="submit" name="continue" id="continue"  value="Continue with Google">
                 </div>
                 <p><i>Terms and Conditions</i> <b>•</b> <i>Privacy Policy</i></p>
                 <p>Already a user? <a href="./signin.html">Log in</a></p>
@@ -32,8 +32,20 @@
         <div class="right"></div>
     </div>
     
-       
-        
+    <script>
+        var rx=/[A-Za-z0-9]+([.-_]?[A-Za-z0-9])*@[A-Za-z0-9]+\.[A-Za-z0-9]+([.]?[A-Za-z0-9])*/g
+        function validate() {
+            let gmail= document.querySelector("#email").value
+            if(gmail.match(rx) == null){
+               alert("Enter valid email")
+            }
+            let Password=document.querySelector(".Password").value
+            let confirm=document.querySelector(".Confirm").value
+            if(Password!=confirm){
+                alert("Enter same Password")
+            }
+        }
+    </script>
     
 </body> 
 </html>
