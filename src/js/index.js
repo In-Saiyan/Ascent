@@ -71,3 +71,72 @@ backToTopButton.addEventListener('click', () => {
         behavior: 'smooth', 
     });
 });
+
+document.querySelectorAll('.colzz').forEach(col => {
+  col.addEventListener('click', function() {
+    const serviceText = this.querySelector('p');  
+    if (serviceText.innerText.includes(".")) {
+      serviceText.style.fontSize = "32px"; 
+      switch (this.id) {
+        case 'logo':
+          serviceText.innerText = "Logo Design";
+          break;
+        case 'video':
+          serviceText.innerText = "Video Editing";
+          break;
+        case 'voice':
+          serviceText.innerText = "Voice Over";
+          break;
+        case 'ai':
+          serviceText.innerText = "AI Services";
+          break;
+        case 'software':
+          serviceText.innerText = "Software Development";
+          break;
+        case 'writing':
+          serviceText.innerText = "Writing and Translation";
+          break;
+        case 'design':
+          serviceText.innerText = "Design and Creative";
+          break;
+        case 'ecommerce':
+          serviceText.innerText = "E-Commerce Marketing";
+          break;
+        default:
+          serviceText.innerText = "Service";
+          break;
+      }
+     
+    } else {
+      
+      serviceText.style.fontSize = "22px"; 
+      switch (this.id) {
+        case 'logo':
+          serviceText.innerText = "Unique and professional logo designs that capture your brand identity and leave a lasting impression.";
+          break;
+        case 'video':
+          serviceText.innerText = "Expert video editing services that enhance visual content, improve engagement, and elevate storytelling.";
+          break;
+        case 'voice':
+          serviceText.innerText = "High-quality voice-over services for a professional touch in advertisements, presentations, and multimedia content.";
+          break;
+        case 'ai':
+          serviceText.innerText = "Cutting-edge AI solutions to automate processes, analyze data, and improve decision-making for businesses.";
+          break;
+        case 'software':
+          serviceText.innerText = "Custom software development designed to meet business-specific needs and improve operational efficiency.";
+          break;
+        case 'writing':
+          serviceText.innerText = "Engaging and well-crafted content, along with accurate translation services to reach a global audience.";
+          break;
+        case 'design':
+          serviceText.innerText = "Innovative design solutions, including web design, graphic design, and creative services to enhance brand aesthetics.";
+          break;
+        case 'ecomm':
+          serviceText.innerText = "Strategic e-commerce marketing services focused on increasing online visibility, traffic, and sales.";
+          break;
+      }
+
+    }
+  });
+});
