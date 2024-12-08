@@ -29,6 +29,7 @@
 
 .colzz {
   flex: 0 0 calc(25% - 2rem); 
+  min-width: 200px;
   box-sizing: border-box;
 }
 

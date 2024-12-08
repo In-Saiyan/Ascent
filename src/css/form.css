@@ -75,10 +75,6 @@
     opacity: 0.8;
 }
 
-.text1:hover, .text2:hover {
-    /* border: solid #472012 2px; */
-}
-
 .text2{
     text-align: left;
 }
@@ -143,6 +139,10 @@
     .contact-form-master {
         border: none;
         margin-bottom: 48px;
+    }
+
+    .callme {
+        padding: 2rem 0;
     }
 
     .a, .b {
