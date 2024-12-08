@@ -8,6 +8,9 @@
     z-index: 1;
     /* background-color: #752d2c; */
   }
+  .testimonial-container {
+    overflow: hidden;
+  }
   .testimonial-h1{
     font-size: 3.2rem;
     font-family: "Jost", sans-serif; 
@@ -24,6 +27,7 @@
   .innerz{
     max-width: 1200px;
     margin: auto;
+    width: 100%;
     /* overflow: hidden; */
 /*    padding: 0 30px;*/
   }
@@ -38,8 +42,17 @@
   
   .rowz{
     display: flex;
-    flex-wrap: wrap;
+    width: 200%;
+    flex-wrap: nowrap;
     justify-content: center;
+    transition: all 1s ease;
+    align-items: center;
+    position: relative;
+    left: 0;
+  }
+  .rowz.active {
+    transition: all 1s ease;
+    left: -100%;
   }
   .colz{
     flex: 33.33%;
@@ -58,9 +71,19 @@
     transition: transform 0.3s, background-color 0.3s;
     cursor: pointer;
     /* margin: 20px; */
-}
+  }
 
-
+  
+  .nav-btn {
+    background-color:lightskyblue; /* Green background */
+    color: black; /* White text */
+    font-size: 14px; /* Smaller text size */
+    padding: 8px 16px; /* Moderate padding */
+    border: 2px solid #4CAF50; /* Border to match the background */
+    border-radius: 4px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
 .boxz:hover {
     transform: scale(1.08);
 }
@@ -88,6 +111,14 @@
     flex: 100%;
     max-width: 80%;
   }
+  .nav-btn{
+    display: none;
+  }
+  .rowz, .rowz.active {
+    width: auto;
+    flex-wrap: wrap;
+    left: 0;
+  }
   }
   
   @media screen and (max-width: 600px) {
@@ -96,5 +127,8 @@
       max-width: 100%;
     }
   }
+
+
+
   
   
