@@ -1,8 +1,7 @@
 window.onscroll = function () {
-  const scrollpos = window.scrollY;
+  const scrollPosition = window.scrollY;
   const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const trigger = pageHeight / 8;
-
+  const triggerPoint = pageHeight / 8;
   if (scrollPosition > triggerPoint * 7) {
     document.body.style.backgroundColor = "black";
   } else if (scrollPosition > triggerPoint * 6) {
@@ -23,7 +22,7 @@ window.onscroll = function () {
   const topbar = document.getElementById("topbar");
   const halfway = document.documentElement.scrollHeight / 9;
 
-  if (scrollpos > halfway) {
+  if (scrollPosition > halfway) {
     setTimeout(function () {
       topbar.style.opacity = "1";
     }, 200);
