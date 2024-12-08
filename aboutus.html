@@ -7,40 +7,80 @@
     <link rel="shortcut icon" href="https://in-saiyan.github.io/Ascent/src/assets/favicon/favicon.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <body class="m-0 p-0 overflow-x-hidden" data-bs-theme="dark" style="background-image:url(https://img.freepik.com/premium-photo/purple-blue-abstract-background-with-colors-series_1085074-5520.jpg); background-size:cover; background-blend-mode: overlay; background-color: #222F;">
-
-
+    <body class="m-0 p-0 overflow-x-hidden bg-dark">
     
         
     <nav class="navbar navbar-expand-lg navbar-dark p-0">
       <div class="container-fluid">
         <div class="container-fluid flex-row d-flex justify-content-between">
-          <a class="navbar-brand col-lg-5 col-sm-6" href="#"><img src="https://in-saiyan.github.io/Ascent/src/assets/AscentLogo.webp" class="w-75" alt="Logo"></a>
-        <div class="text-end col-sm-6 d-flex align-items-center justify-content-end">
-          <button class="navbar-toggler text-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <a class="navbar-brand col-lg-5 col-sm-6" href="#"><img id="Logoi" src="https://in-saiyan.github.io/Ascent/src/assets/AscentLogo.webp" class="w-75" alt="Logo"></a>
         </div>
         </div>
 
-        <div class="collapse navbar-collapse col-lg-4 justify-content-end" id="navbarSupportedContent">
+        <div class="buttonmttdiv col-lg-2">
+          <button class="buttonmtt btn btn-outline-light">Light</button>
+        </div>
+
+      <script>
+          var a=document.querySelector("body");
+          var b=document.querySelector(".buttonmtt");
+          var d=document.querySelector("#Logoi");
+
+          console.log(d);
+          var k=0;
+
+        
+
+          b.addEventListener("click", function(){
+            if(k==0){
+              console.log("Hello");
+              a.classList.remove("bg-dark")
+              a.classList.add("bg-light")
+              a.style.color="black";
+              d.style.filter="invert(1)";
+              b.innerHTML="Dark";
+              b.classList.remove("btn-outline-light")
+              b.classList.add("btn-outline-dark")
+              console.log(k);
+              k=1;
+            }
+
+            else
+            {
+              console.log("Hello");
+              d.style.filter="none"
+              a.style.color="white";
+              b.innerHTML="Light";
+              b.classList.remove("btn-outline-dark")
+              b.classList.add("btn-outline-light")
+              console.log(k);
+              a.classList.remove("bg-light")
+              a.classList.add("bg-dark")
+              k=0; 
+            }
+            });
+
+
+      </script>
+
+        <div class="collapse navbar-collapse col-lg-4 justify-content-end" id="navbaupportedContent">
 
           <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown bg-dark">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Options
               </a>
               <ul class="dropdown-menu"  data-bs-theme="dark">
                 <li><a class="dropdown-item" href="https://in-saiyan.github.io/Ascent/">Home Page</a></li>
                 <li><a class="dropdown-item" href="https://in-saiyan.github.io/Ascent/contactus.html">Contact Us</a></li>
-                <!-- <li><hr class="dropdown-divider"></li> -->
+                
               </ul>
             </li>
 
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit" fdprocessedid="4w95lw">Search</button>
+            <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
       </div>
@@ -52,7 +92,7 @@
         <div class="col-lg-7">
           <h1 class="text-primary fw-bolder">About Us</h1>
           <h3 class="text-info mb-4 fw-light fst-italic">Safe, comprehensive and fast platform</h3>
-          <p class="fs-5">
+          <p class="fs-5 text-primary">
             Ascent is a dynamic platform designed for freelancers and businesses alike. Whether you're a professional looking to showcase your expertise, a company seeking specialized talent, or a freelancer eager to collaborate and learn, Ascent provides the tools to take your career or project to new heights.
           </p>
         </div>
@@ -62,7 +102,9 @@
         </div>
     </div>
 
-    <hr>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
     
     <div class="row align-items-center text-center m-4">
         <div class="column col-lg-3 col-md-6 p-3">
@@ -82,18 +124,18 @@
           <div class="fs-4 fw-light">Earned</div>
         </div>
     </div>
-    <footer class="footer bg-dark p-4 d-flex flex-column align-items-center justify-content-center gap-1" id="footer">
-      <div class="social-footer d-flex flex-row align-items-center justify-content-center gap-3">
-          <a href="https://facebook.com" class="social-btn facebook overflow-hidden d-inline-flex text-decoration-none text-white align-items-center p-3 rounded-pill bg-black" target="_blank">
+    <footer class="footer bg-dark p-4 d-flex flex-column align-items-center justify-content-center gap-1">
+      <div class="d-flex flex-row align-items-center justify-content-center gap-3">
+          <a href="https://facebook.com" class="overflow-hidden text-white align-items-center p-3 rounded-pill bg-black" target="_blank">
               <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="https://instagram.com" class="social-btn instagram overflow-hidden d-inline-flex text-decoration-none text-white align-items-center p-3 rounded-pill bg-black" target="_blank">
+          <a href="https://instagram.com" class="overflow-hidden text-white align-items-center p-3 rounded-pill bg-black" target="_blank">
               <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://linkedin.com" class="social-btn linkedin overflow-hidden d-inline-flex text-decoration-none text-white align-items-center p-3 rounded-pill bg-black" target="_blank">
+          <a href="https://linkedin.com" class="overflow-hidden text-white align-items-center p-3 rounded-pill bg-black" target="_blank">
               <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="https://github.com" class="social-btn github overflow-hidden d-inline-flex text-decoration-none text-white align-items-center p-3 rounded-pill bg-black" target="_blank">
+          <a href="https://github.com" class="overflow-hidden text-white align-items-center p-3 rounded-pill bg-black" target="_blank">
               <i class="fab fa-github"></i>
           </a>
       </div>
