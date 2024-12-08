@@ -12,24 +12,43 @@
 		<h1>Where every <br><span>Skill</span><br>has its perfect match!</h1>
         <br>
 	</section>
-	<section class="card item2">
+	<section class="card item2" id="hoverCard2">
 		<h2><h2>
 	</section>
-	<section class="card item3"><img src="src/assets/hand holding.png"></section>
-	<section class="card item4"><h2> Welcome to Ascent , Here freelancers and clients connect to bring projects to life and network of professionals who believe in the power of skill-sharing. Whether you’re a seasoned professional or a business seeking top-tier talent, our platform makes collaboration seamless.</h2>
+	<section class="card item3" id="infoCard"><img src="src/assets/hand holding.png"></section>
+	<section class="card item4" id="welcomeCard"><h2> Welcome to Ascent , Here freelancers and clients connect to bring projects to life and network of professionals who believe in the power of skill-sharing. Whether you’re a seasoned professional or a business seeking top-tier talent, our platform makes collaboration seamless.</h2>
     </section>
-	<section class="card item5">
+	<section class="card item5" id="connectCard">
 			<p>Connecting creativity with opportunity!</p>
 	</section>
 	<section class="card item7"><img src="src/assets/dog.jpeg"></section>
 	<section class="card item8">
 			<p><img src="src/assets/aiqwwe.jpg"></p>
 	</section>
-	<section class="card item9"><p></p></section>
+	<section class="card item9" id="hoverCard9"><p></p></section>
 	<section class="card item10"><p>Discover experts ready to turn your vision into reality!</p></section>
 	<section class="card item11">
 		<h2><img src="src/assets/square.jpg"><h2>
 	</section>
 </main>
+<script>
+
+	const hoverCard2 = document.getElementById("hoverCard2");
+	hoverCard2.addEventListener("click", function() {
+		this.innerHTML = "<h2>Explore endless possibilities!</h2>";
+	});
+
+	const hoverCard9 = document.getElementById("hoverCard9");
+	hoverCard9.addEventListener("click", function() {
+		this.innerHTML = "<h2>Bring your projects to life!</h2>";
+	});
+
+	const infoCard = document.getElementById("infoCard");
+	infoCard.addEventListener("click", function() {
+		this.innerHTML = "<h2>Explore, Connect, and Create with Ascent!</h2>";
+	});
+
+	</script>
 </body>
 </html>
+
