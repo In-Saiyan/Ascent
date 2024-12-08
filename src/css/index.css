@@ -710,4 +710,28 @@ footer {
   .github:hover {
     background-color: #333;
   }
+
+.back-to-top {  
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--bg-5-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+    background-color: #cba6f7   ;
+}
+
   
