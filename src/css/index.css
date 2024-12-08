@@ -1,9 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --bg-0-color: #181824;
+    --bg-1-color: #1e1e2e;
+    --bg-2-color: #2a2a3b;
+    --bg-3-color: #36364d;
+    --bg-4-color: #424256;
+    --bg-5-color: #4e4e66;
+    --caret-color: #f2cdcd;
+    --main-color: #cba6f7;
+    --sub-color: #7f849c;
+    --sub-alt-color: #181825;
+    --text-color: #cdd6f4;
+    --error-color: #f38ba8;
+    --error-extra-color: #eba0ac;
+    --colorful-error-color: #f38ba8;
+    --colorful-error-color-dark: #5c2f3b;
+    --colorful-error-extra-color: #eba0ac;
+  }
+
 * {
 	margin: 0;
 	box-sizing: border-box;
+    scroll-behavior: smooth !important;
 }
+
 
 body {
 	width: 100%;
@@ -13,7 +34,8 @@ body {
 	margin: 0;
     padding: 0;
     transition: background-color 0.5s ease;
-    background-color: #fdaf8d;
+    background-color: var(--bg-2-color);
+    color: var(--text-color);
 }
 
 body .main-content .hero-section {
@@ -65,6 +87,7 @@ body .main-content .hero-section .hero-content .heros{
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+    text-decoration: none;
 }
 
 body .main-content .hero-section .hero-content .heros .hero-background {
@@ -77,6 +100,7 @@ body .main-content .hero-section .hero-content .heros .hero-background {
 	opacity: 0;
 	transition: all 0.8s ease;
 	background-size: cover;
+    pointer-events: none;
 	background-repeat: no-repeat;
 	background-position: center center;
 }
@@ -87,26 +111,26 @@ body .main-content .hero-section .hero-content .heros:hover .hero-background {
 
 body .main-content .hero-section .hero-content .heros.Intro .hero-background {
 	background-image: linear-gradient(#0004, #0004), url("https://images.unsplash.com/photo-1664575262619-b28fef7a40a4?q=80&w=1432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    border: 2px solid transparent
+    /* border: 1px solid transparent */
 }
 
 body .main-content .hero-section .hero-content .heros.Projects .hero-background {
 	background-image: linear-gradient(#0004, #0004), url("https://images.unsplash.com/photo-1664575197229-3bbebc281874?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    border: 2px solid transparent
+    /* border: 1px solid transparent */
 }
 
 body .main-content .hero-section .hero-content .heros.About .hero-background {
 	background-image: linear-gradient(#0004, #0004), url("https://images.unsplash.com/photo-1551275073-f8adef647c1d?q=80&w=1467&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    border: 2px solid transparent
+    /* border: 1px solid transparent */
 }
 
 body .main-content .hero-section .hero-content .heros.Contact .hero-background {
 	background-image: linear-gradient(#0004, #0004), url("https://images.unsplash.com/photo-1583508915901-b5f84c1dcde1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    border: 2px solid transparent
+    /* border: 1px solid transparent */
 }
 
 body .main-content .hero-section .hero-content .heros.Intro{
-	background: #8c452a;
+	background: var(--bg-5-color);
 	right: 50%;
 	position: absolute;
 	bottom: 50%;
@@ -114,7 +138,7 @@ body .main-content .hero-section .hero-content .heros.Intro{
 }
 
 body .main-content .hero-section .hero-content .heros.Projects{
-	background: #c0544e;
+	background: var(--bg-3-color);
 	left: 50%;
 	position: absolute;
 	bottom: 50%;
@@ -123,7 +147,7 @@ body .main-content .hero-section .hero-content .heros.Projects{
 }
 
 body .main-content .hero-section .hero-content .heros.About{
-	background: #e4a58a;
+	background: var(--bg-2-color);
 	right: 50%;
 	position: absolute;
 	top: 50%;
@@ -132,7 +156,7 @@ body .main-content .hero-section .hero-content .heros.About{
 }
 
 body .main-content .hero-section .hero-content .heros.Contact{
-	background: #b2816c;
+	background: var(--bg-4-color);
 	left: 50%;
 	position: absolute;
 	top: 50%;
@@ -153,68 +177,85 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
 	opacity: 1;
 }
 .projects-card {
-    display: inline-block;
-    height: 60vh;
+    display: flex;
+    height: 400px;
     width: calc(25% - 20px);
-    /* background-color: WHITE; */
     border-radius: 20px;
-    border: 2px solid white;
     font-size: 40px;
-    /* align-content: center;
-    justify-content: center; */
     text-align: center;
     min-width: 250px;
-    transition-duration: 0.5s;
+    transition: all 0.5s ease;
+    background-size: cover;
+    background-color: #0019;
+    background-blend-mode: overlay;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+}
+.projects-card::after {
+    counter-increment: section;
+    content: counter(section);
+    position: absolute;
+    font-size: 6rem;
+    font-weight: bolder;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%,50%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.projects-card:hover::after {
+    opacity: 1;
+    transform: translate(-50%,0%);
 }
 #card1{
     background-image: url("../assets/project1.jpg");
-    background-size: cover;
-    border:0px;
 }
 #card2{
     background-image: url("../assets/project2.jpg");
-    background-size: cover;
-    border:0px
 }
 #card3{
     background-image: url("../assets/project3.jpg");
-    background-size: cover;
-    border:0px
 }
 #card4{
     background-image: url("../assets/project4.jpg");
-    background-size: cover;
-    border:0px;
 }
-.p1{
-    color: aliceblue;
-    font-family: cursive;
-    font-size: 50px;
-}
-.p2{
-    color:aliceblue;
-    font-family: cursive;
-    font-size: 50px;
-}
-.p3{
-    color:aliceblue;
-    font-family: cursive;
-    font-size: 50px;
-}
-.p4{
-    color:aliceblue;
+.p1, .p2, .p3, .p4{
+    color: var(--text-color);
     font-family: cursive;
     font-size: 50px;
 }
 
+.project-title h2 {
+    font-size: 3.2rem;
+    font-family: "Jost", sans-serif;
+    font-weight: bold;
+    color: var(--main-color);
+    text-align: center;
+    margin: 2rem 0 0 0;
+}
+.project-title .borderzz {
+    width: 320px;
+    height: 5px;
+    border-radius: 4px;
+    background: var(--main-color);
+    margin: 0 auto 2.5rem auto;
+  }
+
 .projects-section {
     display: flex;
     gap: 20px;
+    counter-reset: section;
     padding: 20px;
     flex-direction: row;
     justify-content: space-evenly;
     /* font-size: 80px; */
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
     
 }
 .mtt-section{
@@ -223,23 +264,27 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
 	justify-content: center;
 	align-items: center;
 }
-
-.projects-card div {
-    /* font-size: 22px; */
-    opacity: 0; 
-    visibility: hidden; 
-    transition: opacity 0.5s ease;  
+.projects-card .h {
+    font-weight: 600;
+}
+.projects-card .p {
+    font-size: 18px;
+    overflow: hidden;
+    height: 0;
+    padding: 0 10px;
+    transition: all 0.5s ease;  
 }
 
-.projects-card:hover div {
-    visibility: visible;  /* Make it visible */
-    opacity: 1;  /* Smoothly fade in the text */
+.projects-card:hover .p {
+    height: 6ch;
 }
 
 .project-title{
     padding: 30px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .upper{
     display:inline block;
@@ -282,7 +327,7 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
 
 .text_deco_mtt{
     font-weight: bolder;
-    text-decoration: underline;
+    color: var(--main-color);
     font-size: 15px;
 }
 
@@ -345,12 +390,25 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
     top: 0;
     left: 0;
     height: 50px;
-    background-color: #6A2927; 
+    background-color: var(--bg-0-color); 
     padding: 10px 20px;
     flex-direction: row;
     align-items: center;
     z-index: 99999; 
     justify-content: space-between;
+}
+
+#topbar::before {
+    content:'';
+    opacity: inherit;
+    transition: opacity 0.3s ease;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-0-color);
+    z-index: -1; 
 }
 
 #topbar .main-nav {
@@ -359,10 +417,12 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
     left: 0;
     height: 100lvh;
     width: 0;
-    background-image: url("https://plus.unsplash.com/premium_photo-1669842336797-4dfc03afa025?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnJvd258ZW58MHx8MHx8fDA%3D");
+    background: var(--bg-0-color);
+    background-image: url("https://raw.githubusercontent.com/orangci/walls-catppuccin-mocha/master/abstract-swirls.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-blend-mode: overlay;
     z-index: -1;
     padding-top: 50px;
     display: flex;
@@ -396,7 +456,7 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
     width: 100%;
     display: flex;
     height: 4px;
-    background-color: #FFF;
+    background-color: var(--caret-color);
     border-radius: 10px;
     transition: all 0.3s ease;
 }
@@ -420,8 +480,13 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
 #topbar .main-nav .nav-link {
     font-size: 2rem;
     text-decoration: none;
-    color: #FFF;
+    color: var(--text-color);
     text-shadow: 0px 0px 10px #0006;
+    transition: all 0.3s ease;
+}
+
+#topbar .main-nav .nav-link:hover {
+    color: var(--sub-color);
 }
 
 #topbar::after {
@@ -474,16 +539,16 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
 
 .login-btn, .signup-btn {
     padding: 10px 20px;
-    background-color: #8b3f1c;
+    background-color: var(--colorful-error-color);
     border: none;
-    color: white;
+    color: var(--bg-0-color);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .login-btn:hover, .signup-btn:hover {
-    background-color: #af4e39;
+    background-color: var(--main-color);
 }
 
 
@@ -540,7 +605,7 @@ body .main-content .hero-section .hero-content .heros:hover h1 {
 }
 
 footer {
-    background-color: #1d1212;
+    background-color: var(--bg-0-color);
     padding: 20px;
     text-align: center;
   }
@@ -557,7 +622,7 @@ footer {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background-color: #444;
+    background-color: var(--bg-5-color);
     color: white;
     border-radius: 50%;
     position: relative;
@@ -613,5 +678,3 @@ footer {
     background-color: #333;
   }
   
-
-
