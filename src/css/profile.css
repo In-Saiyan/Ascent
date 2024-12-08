@@ -1,4 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-0-color: #181824;
+    --bg-1-color: #1e1e2e;
+    --bg-2-color: #2a2a3b;
+    --bg-3-color: #36364d;
+    --bg-4-color: #424256;
+    --bg-5-color: #4e4e66;
+    --caret-color: #f2cdcd;
+    --main-color: #cba6f7;
+    --sub-color: #7f849c;
+    --sub-alt-color: #181825;
+    --text-color: #cdd6f4;
+    --error-color: #f38ba8;
+    --error-extra-color: #eba0ac;
+    --colorful-error-color: #f38ba8;
+    --colorful-error-color-dark: #5c2f3b;
+    --colorful-error-extra-color: #eba0ac;
+  }
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -13,37 +33,53 @@ body {
 	height: 100%; */
 	font-family: "Jost", sans-serif;
     transition: background-color 0.5s ease;
-    background-color: #2e221e;
+    background-color: var(--bg-2-color);
     /* overflow: hidden; */
     color: #ccc;
 }
 
 #topbar {
+    opacity: 1;
+    display: flex;
     transition: opacity 0.3s ease;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     height: 50px;
-    background-color: #1d1818; 
+    background-color: var(--bg-0-color); 
     padding: 10px 20px;
     flex-direction: row;
     align-items: center;
-    display: flex;
-    z-index: 99999;
+    z-index: 99999; 
     justify-content: space-between;
+}
+
+#topbar::before {
+    content:'';
+    opacity: inherit;
+    transition: opacity 0.3s ease;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-0-color);
+    z-index: -1; 
 }
 
 #topbar .main-nav {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100lvh;
     width: 0;
-    background-image: url("https://plus.unsplash.com/premium_photo-1669842336797-4dfc03afa025?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnJvd258ZW58MHx8MHx8fDA%3D");
+    background: var(--bg-0-color);
+    background-image: url("https://raw.githubusercontent.com/orangci/walls-catppuccin-mocha/master/abstract-swirls.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-blend-mode: overlay;
     z-index: -1;
     padding-top: 50px;
     display: flex;
@@ -51,7 +87,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 30px;
-    transition: width 0.3s ease, opacity 0.3s ease;
+    transition: all 0.3s ease;
     overflow: hidden;
 }
 
@@ -77,13 +113,17 @@ body {
     width: 100%;
     display: flex;
     height: 4px;
-    background-color: #FFF;
+    background-color: var(--caret-color);
     border-radius: 10px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: all 0.3s ease;
 }
 
+/*#topbar.active .hamburger-menu .bar{
+    background-color: #32AD85;
+}*/
+
 #topbar.active .hamburger-menu .bar.bar1 {
-    transform: rotate(45deg) translate(8px, 8px);
+    transform: rotate(45deg) translate(8px,8px);
 }
 
 #topbar.active .hamburger-menu .bar.bar2 {
@@ -91,14 +131,19 @@ body {
 }
 
 #topbar.active .hamburger-menu .bar.bar3 {
-    transform: rotate(-45deg) translate(9px, -9px);
+    transform: rotate(-45deg) translate(9px,-9px);
 }
 
 #topbar .main-nav .nav-link {
     font-size: 2rem;
     text-decoration: none;
-    color: #FFF;
+    color: var(--text-color);
     text-shadow: 0px 0px 10px #0006;
+    transition: all 0.3s ease;
+}
+
+#topbar .main-nav .nav-link:hover {
+    color: var(--sub-color);
 }
 
 #topbar::after {
@@ -106,20 +151,21 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100lvh;
     width: 100%;
     background: #0003;
     backdrop-filter: blur(10px);
     z-index: -5;
     opacity: 0;
-    transition: opacity 0.3s ease, pointer-events 0.3s ease;
+    transition: all 0.3s ease;
     pointer-events: none;
 }
 
-#topbar.active::after {
+#topbar.active::after{
     opacity: 1;
     pointer-events: auto;
 }
+
 
 .profilemain {
     display: flex;
@@ -222,6 +268,7 @@ body {
     display: flex;
     /* width: 70%; */
     overflow-y: auto;
+    overflow-x: unset;
     /* max-height: calc(100vh - 50px);  */
 }
 
@@ -271,3 +318,19 @@ body {
     height: 50px;
     background-color: #0006;
 } */
+
+
+
+.logout-btn {
+    padding: 10px 20px;
+    background-color: var(--colorful-error-color);
+    border: none;
+    color: var(--bg-0-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: var(--main-color);
+}

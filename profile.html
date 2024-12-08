@@ -1,3 +1,4 @@
+<!-- Made By Aryan Singh -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,15 +22,15 @@
             	
             </div>
             <div class="auth-buttons">
-                <button class="login-btn" onclick="window.open('./signin.html')">Logout</button>
+                <button class="logout-btn">Logout</button>
             </div>
             <nav class="main-nav">
             	<a href="./introduc.html" class="nav-link">Intro</a>
-            	<a href="#services-section" class="nav-link">Services</a>
-            	<a href="#projects-section" class="nav-link">Projects</a>
-            	<a href="#contact-section" class="nav-link">Contact</a>
-            	<a href="#team-section" class="nav-link">Team</a>
-            	<a href="#about-section" class="nav-link">About</a>
+            	<a href="./index.html#services-section" class="nav-link">Services</a>
+            	<a href="./index.html#projects-section" class="nav-link">Projects</a>
+            	<a href="./index.html#contact-section" class="nav-link">Contact</a>
+            	<a href="./index.html#team-section" class="nav-link">Team</a>
+            	<a href="./index.html#about-section" class="nav-link">About</a>
             </nav>
         </div>
     </header>
@@ -41,7 +42,7 @@
                 <p>Backend Developer</p>
                 <br>
                 &nbsp;
-                <p class="pratings"><span>Rating: 4009</span> <span>&starf;&starf;&starf;&starf;&starf;</span></p>
+                <p class="pratings"><span>Rating: 3895</span> <span>&starf;&starf;&starf;&starf;&starf;</span></p>
                 <div class="borderz"></div>
 
                 <div class="pcards card1">
@@ -85,6 +86,12 @@
               
         </section>
     </main>
-    <script src="src/js/indexp.js"></script>
+    <script>
+        const header = document.getElementById('topbar');
+
+        function ToggleHeader(){
+            header.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
