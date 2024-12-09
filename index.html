@@ -370,19 +370,20 @@
                 </div>
             </div>
             <div class="b">
-                <form class="form">
+                <form class="form" id="contact-form">
                     First Name
                     <input type="text" placeholder="Type your First Name" class="text1" spellcheck="false"
-                        required>
+                        required id="fname" name="fname">
                     Last Name
-                    <input type="text" placeholder="Type your Last Name" class="text1" spellcheck="false">
+                    <input type="text" placeholder="Type your Last Name" class="text1" spellcheck="false" id="lname" name="lname">
                     Contact No
-                    <input type="tel" placeholder="Type your Contact No" class="text1">
+                    <input type="number" placeholder="Type your Contact No" class="text1" id="contactno" name="contactno">
                     Email
-                    <input type="email" placeholder="Type your Email" class="text1" required>
+                    <input type="email" placeholder="Type your Email" class="text1" required id="uemail" name="uemail">
                     Feedback
                     <input type="text" placeholder="Give your valuable Feedback or write a Message..... "
-                        class="text2">
+                        class="text2" name="feedback" id="feedback">
+                    <span class="msgError" id="msgError"></span>
                     <input type="submit" value="Submit" class="submit">
                 </form>
             </div>
@@ -532,7 +533,7 @@
             <p> © 2024 Mavenix 2024</p>
     </footer>
     <button id="backToTop" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
-
+    <script src="src/js/formvalidate.js"></script>
     <script src="src/js/index.js"></script>
 </body>
 
