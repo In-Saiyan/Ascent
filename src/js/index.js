@@ -6,19 +6,19 @@ window.onscroll = function () {
     if (scrollPosition > triggerPoint * 7) {
       document.body.style.backgroundColor = "black";
     } else if (scrollPosition > triggerPoint * 6) {
-      document.body.style.backgroundColor = "#1C1C2B"; // Very dark bluish-gray
+      document.body.style.backgroundColor = "#1C1C2B"; 
     } else if (scrollPosition > triggerPoint * 5) {
-      document.body.style.backgroundColor = "#232336"; // Slightly lighter bluish-gray
+      document.body.style.backgroundColor = "#232336"; 
     } else if (scrollPosition > triggerPoint * 4) {
-      document.body.style.backgroundColor = "#2A2A3B"; // Base color
+      document.body.style.backgroundColor = "#2A2A3B"; 
     } else if (scrollPosition > triggerPoint * 3) {
-      document.body.style.backgroundColor = "#36364A"; // Medium bluish-gray
+      document.body.style.backgroundColor = "#36364A"; 
     } else if (scrollPosition > triggerPoint * 2) {
-      document.body.style.backgroundColor = "#43435C"; // Lighter bluish-gray
+      document.body.style.backgroundColor = "#43435C"; 
     } else if (scrollPosition > triggerPoint) {
-      document.body.style.backgroundColor = "#535371"; // Even lighter bluish-gray
+      document.body.style.backgroundColor = "#535371"; 
     } else {
-      document.body.style.backgroundColor = "#666687"; // Lightest bluish-gray
+      document.body.style.backgroundColor = "#666687"; 
     }
   } else {
     document.body.style.backgroundColor = "var(--bg-2-color)";
@@ -36,14 +36,14 @@ window.onscroll = function () {
   }
 };
 
-window.onload = function () {
-  const topbar = document.getElementById("topbar");
-  const scrollpos = window.scrollY;
-  const halfway = document.documentElement.scrollHeight / 5;
-  if (scrollpos > halfway) {
-    topbar.style.display = "flex";
-  }
-};
+// window.onload = function () {
+//   const topbar = document.getElementById("topbar");
+//   const scrollpos = window.scrollY;
+//   const halfway = document.documentElement.scrollHeight / 5;
+//   if (scrollpos > halfway) {
+//     topbar.style.display = "flex";
+//   }
+// };
 
 const header = document.getElementById("topbar");
 
